@@ -30,7 +30,6 @@ Auth::routes([
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => 'checkJabatan:Pengawas Petugas Parkir,Central Park Manager'], function() {
-    
     Route::controller(UserController::class)->group(function () {
         Route::get('user', 'index')->name('user.index');
         Route::get('user/create', 'create')->name('user.create');
