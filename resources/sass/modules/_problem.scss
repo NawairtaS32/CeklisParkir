@@ -1,0 +1,193 @@
+.problem{
+    margin-bottom: 140px;
+        .subJudul{
+            padding: 20px;
+            font-size: 60px;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        .menu{
+            margin-bottom: 32px;
+            .btn{
+                font-size: 20px;
+            }
+        }
+
+        .table{
+            font-size: 20px;
+            text-align: center;
+        }
+        .info{
+            font-size: 20px;
+        }
+}
+
+.problem-create{
+    margin-bottom: 140px;
+    .card{
+        margin-left: 20%;
+        width: 50%;
+        border: 1px solid black;
+        border-radius: 40px;
+        box-shadow: 32px 40px 20px rgba(0,0,0,0.8);
+            .card-header{
+                font: italic small-caps bold 20px/50px Georgia, serif;
+                letter-spacing: 2px;
+                color: darkblue;
+                background-color: #696969;
+                border-bottom: 2px solid black;
+                border-radius: 38px 38px 20px 20px;
+            }
+            .form-group{
+                margin-bottom: 20px;
+                font-size: 20px;
+                    .label{
+                        margin-bottom: 2px;
+                        margin-left: 20px;
+                    }
+            }
+
+            .tombol{
+                text-align: center;
+                    .btn{
+                        margin: 20px 90px 10px 90px;
+                        font-size: 24px;
+                            .fa-angle-left{
+                                margin-right: 20px;
+                            }
+                            .fa-angle-right{
+                                margin-left: 20px;
+                            }
+                            &:hover{
+                                background: black;
+                                color: whitesmoke;
+                            }
+
+                    }
+            }
+    }
+}
+
+.problem-show{
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-left: 25%;
+    .card{
+        width: 60%;
+        height: auto;
+        border: 0;
+        .image{
+            padding: 60px;
+            width: 100%;
+            height: 500px;
+            border-radius: 50px 50px 0px 0px;
+        }
+        span{
+            font-size: 32px;
+            border: none;
+            text-align: end;
+        }
+        .card-header{
+            background: #696969;
+            position: relative;
+            .title{
+                padding: 20px;
+                text-decoration: none;
+                color: whitesmoke;
+                font-size: 32px;
+                }
+            }
+        .list-group{
+            font-size: 20px;
+            letter-spacing: 2px;
+            .list-group-item{
+                padding: 20px;
+            }
+        }
+        .tombol{
+            display: inline-block;
+            text-align: center;
+            .btn{
+                width: 380px;
+                font-size: 32px;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 600px){
+    .problem{
+        margin-bottom: 140px;
+            .subJudul{
+                font-size: 40px;
+            }
+            .menu{
+                margin-bottom: 20px;
+                .btn{
+                    font-size: 14px;
+                }
+            }
+    
+            .table{
+                font-size: 20px;
+                text-align: center;
+            }
+    }
+
+    .problem-create{
+        .card{
+            margin-left: 4%;
+            width: 90%;
+            border: 1px solid black;
+            border-radius: 40px;
+            box-shadow: 32px 40px 20px rgba(0,0,0,0.8);
+                .card-header{
+                    text-align: center;
+                    font: italic small-caps bold 20px/50px Georgia, serif;
+                    letter-spacing: 2px;
+                    color: darkblue;
+                    background-color: #696969;
+                    border-bottom: 2px solid black;
+                    border-radius: 38px 38px 20px 20px;
+                }
+                .card-body{
+                    border: 0px;
+                }
+
+                .tombol{
+                    text-align: center;
+                        .btn{
+                            margin: 20px 40px 10px 40px;
+                            font-size: 18px;
+                                .fa-angle-left{
+                                    margin-right: 20px;
+                                }
+                                .fa-angle-right{
+                                    margin-left: 20px;
+                                }
+                                &:hover{
+                                    background: black;
+                                    color: whitesmoke;
+                                }
+    
+                        }
+                }
+        }
+    }
+
+    .problem-show{
+        margin-left: 0px;
+        margin-bottom: 10%;
+            .card{
+                padding: 20px;
+                margin: 10px;
+                width: 100%;
+                border: 0;
+                    .image{
+                        padding: 40px;
+                    }
+            }
+    }
+    
+}

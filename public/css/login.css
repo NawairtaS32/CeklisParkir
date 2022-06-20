@@ -1,0 +1,64 @@
+#mainLogin {
+  background-color: #1E90FF;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+#mainLogin .wrapper-login {
+  height: auto;
+  margin: 10% auto;
+  width: 400px;
+  height: 500px;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 2px 8px rgb(0, 0, 0);
+  border-radius: 50px;
+}
+#mainLogin .wrapper-login .judul {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+#mainLogin .wrapper-login form .info {
+  margin-bottom: 40px;
+  margin-left: -40px;
+  padding: 10px;
+  width: 380px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 18px;
+  text-decoration: none;
+  border-bottom: 2px solid red;
+}
+#mainLogin .wrapper-login form .form-control {
+  text-align: justify;
+  border-radius: 20px 0px 0px 20px;
+  height: 50px;
+  font-size: 20px;
+}
+#mainLogin .wrapper-login form .tombol {
+  margin-top: 40px;
+  margin-left: 80%;
+}
+@media only screen and (max-width: 500px) {
+  #mainLogin .wrapper-login {
+    width: 320px;
+    height: 460px;
+    margin-top: 180px;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 2px 8px rgb(0, 0, 0);
+    border-radius: 50px;
+  }
+  #mainLogin .wrapper-login form .info {
+    margin-left: -40px;
+    width: 300px;
+    font-size: 12px;
+  }
+  #mainLogin .wrapper-login form .form-control {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,23 @@
+@use 'modules/mixin';
+@use 'modules/header';
+@use 'modules/home';
+@use 'modules/user';
+@use 'modules/kendaraan';
+@use 'modules/problem';
+
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    font-family: "Times New Roman", Times, serif;    
+
+        .wrapper-content{
+            margin-top: 180px;
+            width: 100%;
+            height: 100%;
+        }
+}
+
+@media screen and (max-width: 600px){
+    
+}

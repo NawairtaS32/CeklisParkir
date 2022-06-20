@@ -1,0 +1,85 @@
+#mainLogin {
+	background-color:	#1E90FF;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	font-family: "Times New Roman", Times, serif;
+	text-transform: capitalize;
+	font-weight: bold;
+
+    .wrapper-login{
+        height: auto;
+        margin: 10% auto;
+        width: 400px;
+        height: 500px;
+        padding: 50px;
+        background: rgba(0, 0, 0, 0.4);
+        box-shadow: 1px 2px 8px rgba(0, 0, 0, 4);
+        border-radius: 50px;
+
+        .judul{
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        form{
+
+            .info{
+                margin-bottom: 40px;
+                margin-left: -40px;
+                padding: 10px;
+                width: 380px;
+                text-align: center;
+                color: whitesmoke;
+                font-size: 18px;
+                text-decoration: none;
+                border-bottom: 2px solid red;
+            }
+
+            .form-control{
+                text-align: justify;
+                border-radius: 20px 0px 0px 20px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            .tombol{
+                margin-top: 40px;
+                margin-left: 80%;
+            }
+
+        }
+
+
+    }
+
+    @media only screen and (max-width: 500px){
+        
+        .wrapper-login {
+            width: 320px;
+            height: 460px;
+            margin-top: 180px;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 1px 2px 8px rgba(0, 0, 0, 4);
+            border-radius: 50px;  
+            
+
+            form{
+
+                .info{
+                    margin-left: -40px;
+                    width: 300px;
+                    font-size: 12px;
+                    
+                }
+
+                .form-control{
+                    font-size: 12px;
+
+                }
+            }   
+        }
+    }
+}

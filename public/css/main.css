@@ -1,0 +1,925 @@
+.wrapper-header {
+  margin: 0;
+  padding: 0;
+}
+.wrapper-header .navbar {
+  border-bottom: 6px solid darkblue;
+  border-radius: 0px 0px 80px 80px;
+  border-bottom-style: dashed;
+  background: lightcyan;
+}
+.wrapper-header .navbar .navbar-brand {
+  text-align: center;
+  width: 340px;
+  padding: 10px;
+  margin-left: 80px;
+  background: lightcyan;
+  border-left: 6px solid darkblue;
+  border-top: 6px solid darkcyan;
+  border-right: 6px solid darkcyan;
+  border-bottom: 6px solid darkblue;
+  border-radius: 20px;
+}
+.wrapper-header .navbar .navbar-brand .logo {
+  display: block;
+  text-shadow: 1px 1px 2px black, 0 0 25px darkcyan, 0 0 5px darkblue;
+  font-size: 50px;
+  color: white;
+}
+.wrapper-header .navbar .navbar-brand .lokasi {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px darkcyan, 0 0 5px darkblue;
+  text-decoration: none;
+  font-size: 24px;
+}
+.wrapper-header .navbar .navbar-nav {
+  padding: 20px;
+  margin-left: 50%;
+}
+.wrapper-header .navbar .navbar-nav .nav-item {
+  padding-right: 20px;
+  font-size: 24px;
+  text-align: end;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.wrapper-header .navbar .navbar-nav .nav-item a {
+  color: black;
+  text-decoration: none;
+}
+.wrapper-header .navbar .navbar-nav .nav-item .navImage {
+  border-radius: 50%;
+  margin-top: -14px;
+  margin-left: 5px;
+  width: 100px;
+  height: 100px;
+}
+.wrapper-header .navbar .navbar-nav .nav-menu a {
+  line-height: 50px;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-bottom: 6px solid darkblue;
+  border-left: 6px solid darkblue;
+  border-top: 6px solid darkcyan;
+  border-right: 6px solid darkcyan;
+  border-radius: 20%;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  transition: transform 0.4s;
+  position: absolute;
+  background: lightskyblue;
+  color: whitesmoke;
+  text-shadow: 1px 1px 2px black, 0 0 25px darkcyan, 0 0 5px darkblue;
+}
+.wrapper-header .navbar .navbar-nav .nav-menu a:hover {
+  background-color: black;
+  color: skyblue;
+  border-top: 6px solid darkblue;
+  border-right: 6px solid darkblue;
+  border-bottom: 6px solid darkcyan;
+  border-left: 6px solid darkcyan;
+}
+.wrapper-header .navbottom .nav-pills {
+  width: 100%;
+  text-decoration: none;
+}
+.wrapper-header .navbottom .nav-pills .nav-link {
+  text-decoration: none;
+  text-transform: capitalize;
+  text-shadow: 2px 1px 2px blue;
+}
+.wrapper-header .navbottom .nav-pills .nav-link:hover {
+  color: darkblue;
+  background: darkcyan;
+  transition: 0.3s ease;
+  border-bottom: 10px solid darkblue;
+}
+.wrapper-header .offcanvas {
+  background: rgba(255, 255, 255, 0.1);
+  border-right: 4px solid black;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+.wrapper-header .offcanvas .btn-close {
+  background-color: whitesmoke;
+  border: 4px solid black;
+  margin-left: 100%;
+  font-size: 32px;
+  border-radius: 0px 20px 20px 0px;
+}
+.wrapper-header .offcanvas .offcanvas-header {
+  background-color: black;
+  margin-top: -60px;
+  display: block;
+}
+.wrapper-header .offcanvas .offcanvas-header .image {
+  margin-left: 50px;
+  border-radius: 50%;
+  text-align: center;
+  width: 260px;
+  height: 200px;
+}
+.wrapper-header .offcanvas .offcanvas-header .subJudul {
+  margin: 0;
+  padding: 0;
+  color: whitesmoke;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+.wrapper-header .offcanvas .offcanvas-header .subJudul .profil {
+  color: whitesmoke;
+  position: relative;
+  text-decoration: none;
+  padding: 20px;
+  height: 10px;
+}
+.wrapper-header .offcanvas .offcanvas-header .subJudul .profil i {
+  position: absolute;
+  top: 50%;
+  left: 340px;
+  transform: translateY(-50%);
+  font-size: 32px;
+  transition: transform 0.4s;
+}
+.wrapper-header .offcanvas .offcanvas-header .subJudul .profil .rotate {
+  transform: translateY(-50%) rotate(-180deg);
+}
+.wrapper-header .offcanvas .offcanvas-body {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-profil {
+  display: none;
+  background: darkcyan;
+  color: whitesmoke;
+  list-style: none;
+  font-size: 24px;
+  margin-bottom: -1px;
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-profil .item {
+  text-align: end;
+  margin-left: -40px;
+  width: 420px;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-profil .item span {
+  margin-right: 40px;
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-profil .tombol {
+  text-align: end;
+  padding: 10px;
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-item {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 20px;
+  letter-spacing: 2px;
+  width: 100%;
+  height: 100%;
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-item .item {
+  line-height: 60px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-item .item a {
+  text-transform: capitalize;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  padding-left: 80px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 6px solid transparent;
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-item .item a:hover {
+  background: darkblue;
+  color: cyan;
+  border-left-color: cyan;
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-item .item a span {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  font-size: 32px;
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-item .item a i {
+  position: absolute;
+  top: 50%;
+  left: 340px;
+  transform: translateY(-50%);
+  font-size: 32px;
+  transition: transform 0.4s;
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-item .item a .rotate {
+  transform: translateY(-50%) rotate(-180deg);
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-item .item .sub-item {
+  padding: 20px 0px 20px 0px;
+  position: static;
+  display: none;
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-item .item .sub-item li {
+  text-align: end;
+  list-style: none;
+  border-bottom: none;
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-item .item .sub-item li a {
+  padding-right: 20px;
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-item .item .sub-item li .input-group {
+  padding: 10px;
+  color: white;
+}
+.wrapper-header .offcanvas .offcanvas-body .menu-item .item .active {
+  background: darkblue;
+  color: cyan;
+  border-left-color: cyan;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper-header .navbar {
+    background: none;
+    border: none;
+  }
+  .wrapper-header .navbar .navbar-brand {
+    width: 100%;
+    text-align: start;
+    padding: 20px;
+    margin-left: 10px;
+    background: lightcyan;
+    border-left: 6px solid darkblue;
+    border-top: 6px solid darkred;
+    border-right: 6px solid darkred;
+    border-bottom: 6px solid darkblue;
+    border-radius: 20px;
+    border-style: dashed;
+  }
+  .wrapper-header .navbar .navbar-brand .logo {
+    display: block;
+    text-shadow: 1px 1px 2px black, 0 0 25px darkcyan, 0 0 5px darkblue;
+    font-size: 50px;
+    color: white;
+  }
+  .wrapper-header .navbar .navbar-brand .lokasi {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px darkcyan, 0 0 5px darkblue;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  .wrapper-header .navbar .image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 40%;
+    margin-left: 70px;
+    width: 120px;
+    height: 140px;
+  }
+}
+#mainHome .row {
+  margin: 40px;
+}
+#mainHome .card {
+  font-size: 20px;
+  border: 0;
+}
+#mainHome .card .card-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+#mainHome .card .list-group-item {
+  border: 0px;
+}
+#mainHome .card .btn {
+  margin-left: 140px;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  #mainHome .card {
+    font-size: 20px;
+  }
+  #mainHome .card .card-title {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  #mainHome .card .list-group {
+    margin-bottom: 20px;
+  }
+  #mainHome .card .btn {
+    margin-left: 140px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+  }
+}
+.user {
+  width: auto;
+  height: auto;
+}
+.user .subJudul {
+  margin-left: 34%;
+  font-size: 40px;
+  color: black;
+  text-shadow: 1px 1px 2px #778899, 0 0 5px #D3D3D3;
+}
+.user .menu {
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+.user .menu .btn {
+  font-size: 20px;
+}
+.user .table {
+  font-size: 20px;
+  text-align: center;
+}
+
+.user-create {
+  width: 50%;
+}
+.user-create .card {
+  border: 1px solid black;
+  border-radius: 40px;
+  box-shadow: 32px 40px 20px rgba(0, 0, 0, 0.8);
+}
+.user-create .card .card-header {
+  text-align: center;
+  font: italic small-caps bold 20px/50px Georgia, serif;
+  letter-spacing: 2px;
+  color: darkblue;
+  background-color: #696969;
+  border-bottom: 2px solid black;
+  border-radius: 38px 38px 20px 20px;
+}
+.user-create .card .form-group {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.user-create .card .form-group .label {
+  margin-bottom: 2px;
+  margin-left: 20px;
+}
+.user-create .card .form-group .form-check {
+  margin-left: 20px;
+}
+.user-create .card .form-group .form-check .form-check-label {
+  margin-left: 10px;
+}
+.user-create .card .tombol {
+  margin: 50px;
+  display: inline;
+}
+.user-create .card .tombol .btn {
+  width: 40%;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.userShow {
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-left: 30%;
+}
+.userShow .card {
+  width: 50%;
+  height: auto;
+  border: 0;
+}
+.userShow .image {
+  width: 100%;
+  height: 500px;
+  border-radius: 50px 50px 0px 0px;
+}
+.userShow .card-header {
+  background-color: #696969;
+  color: whitesmoke;
+  border-radius: 0px 0px 40px 40px;
+  font-size: 40px;
+  text-align: right;
+}
+.userShow .card-body .tombol {
+  margin-left: 9 0%;
+}
+.userShow .card-body .tombol a {
+  width: 100px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 720px) {
+  #main {
+    width: auto;
+    height: auto;
+  }
+  #main .subJudul {
+    margin-left: 100px;
+    font-size: 30px;
+  }
+  #main .menu {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  #main .menu .btn {
+    font-size: 14px;
+  }
+  #main .table {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .user {
+    margin: 40px 40px 40px 20px;
+    width: 90%;
+    padding: 10px;
+  }
+  .user .card {
+    border: 1px solid black;
+    border-radius: 40px;
+    box-shadow: 32px 40px 20px rgba(0, 0, 0, 0.8);
+  }
+  .user .card .card-header {
+    text-align: center;
+    font: italic small-caps bold 20px/50px Georgia, serif;
+    letter-spacing: 2px;
+    color: darkblue;
+    background-color: #696969;
+    border-bottom: 2px solid black;
+    border-radius: 38px 38px 20px 20px;
+  }
+  .user .card .card-body {
+    border: 0px;
+  }
+  .user .card .tombol {
+    margin-left: 40%;
+  }
+  .user .card .tombol .btn {
+    border-radius: 20px;
+    margin: 10px;
+    font-size: 20px;
+  }
+
+  .user-create {
+    width: 100%;
+  }
+  .user-create .card .card-header {
+    text-align: center;
+  }
+  .user-create .card .tombol {
+    margin: 0px;
+    display: inline;
+  }
+  .user-create .card .tombol .btn {
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    font-size: 20px;
+  }
+
+  .userShow {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-left: 0%;
+  }
+  .userShow .card {
+    border-radius: 40px;
+    width: 100%;
+    height: auto;
+    border: 0;
+  }
+  .userShow .image {
+    width: 100%;
+    height: 320px;
+    border-radius: 50px 50px 0px 0px;
+  }
+  .userShow .card-header {
+    font-size: 40px;
+    text-align: right;
+  }
+  .userShow .card-body .tombol {
+    margin-left: 50%;
+  }
+  .userShow .card-body .tombol a {
+    width: 100px;
+    font-size: 20px;
+  }
+}
+.kendaraan {
+  margin-bottom: 140px;
+}
+.kendaraan .subJudul {
+  padding: 20px;
+  font-size: 60px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.kendaraan .menu {
+  margin-bottom: 32px;
+}
+.kendaraan .menu .btn {
+  font-size: 20px;
+}
+.kendaraan .table {
+  font-size: 20px;
+  text-align: center;
+}
+.kendaraan .info {
+  font-size: 20px;
+}
+
+.kendaraan-create {
+  margin-bottom: 140px;
+}
+.kendaraan-create .card {
+  margin-left: 20%;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 40px;
+  box-shadow: 32px 40px 20px rgba(0, 0, 0, 0.8);
+}
+.kendaraan-create .card .card-header {
+  font: italic small-caps bold 20px/50px Georgia, serif;
+  letter-spacing: 2px;
+  color: darkblue;
+  background-color: #696969;
+  border-bottom: 2px solid black;
+  border-radius: 38px 38px 20px 20px;
+}
+.kendaraan-create .card .form-group {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.kendaraan-create .card .form-group .label {
+  margin-bottom: 2px;
+  margin-left: 20px;
+}
+.kendaraan-create .card .tombol {
+  text-align: center;
+}
+.kendaraan-create .card .tombol .btn {
+  margin: 20px 90px 10px 90px;
+  font-size: 24px;
+}
+.kendaraan-create .card .tombol .btn .fa-angle-left {
+  margin-right: 20px;
+}
+.kendaraan-create .card .tombol .btn .fa-angle-right {
+  margin-left: 20px;
+}
+.kendaraan-create .card .tombol .btn:hover {
+  background: black;
+  color: whitesmoke;
+}
+
+.kendaraan-show {
+  margin-bottom: 140px;
+}
+.kendaraan-show .subJudul {
+  font-size: 40px;
+  text-align: justify;
+  margin: 20px;
+}
+.kendaraan-show .img720p #gambar img {
+  width: 500px;
+  height: 500px;
+  margin-bottom: 10px;
+}
+.kendaraan-show .card {
+  width: 82%;
+  height: auto;
+  border: 0;
+}
+.kendaraan-show .card .card-header {
+  background: #696969;
+  text-align: center;
+  font-size: 40px;
+}
+.kendaraan-show .card .card-header span {
+  padding: 20px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+.kendaraan-show .card .list-group {
+  border-radius: 50px;
+  padding-left: 20px;
+  text-transform: capitalize;
+  font-size: 28px;
+  letter-spacing: 5px;
+}
+.kendaraan-show .card .list-group .list-group-item {
+  border: 0;
+}
+.kendaraan-show .tombol {
+  display: inline-block;
+}
+.kendaraan-show .tombol .btn {
+  width: 530px;
+  font-size: 32px;
+}
+
+@media screen and (max-width: 600px) {
+  .kendaraan {
+    margin-bottom: 140px;
+  }
+  .kendaraan .subJudul {
+    font-size: 40px;
+  }
+  .kendaraan .menu {
+    margin-bottom: 20px;
+  }
+  .kendaraan .menu a {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .kendaraan .table {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .kendaraan-create .card {
+    margin-left: 4%;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 40px;
+    box-shadow: 32px 40px 20px rgba(0, 0, 0, 0.8);
+  }
+  .kendaraan-create .card .card-header {
+    text-align: center;
+    font: italic small-caps bold 20px/50px Georgia, serif;
+    letter-spacing: 2px;
+    color: darkblue;
+    background-color: #696969;
+    border-bottom: 2px solid black;
+    border-radius: 38px 38px 20px 20px;
+  }
+  .kendaraan-create .card .card-body {
+    border: 0px;
+  }
+  .kendaraan-create .card .tombol {
+    text-align: center;
+  }
+  .kendaraan-create .card .tombol .btn {
+    margin: 20px 40px 10px 40px;
+    font-size: 18px;
+  }
+  .kendaraan-create .card .tombol .btn .fa-angle-left {
+    margin-right: 20px;
+  }
+  .kendaraan-create .card .tombol .btn .fa-angle-right {
+    margin-left: 20px;
+  }
+  .kendaraan-create .card .tombol .btn:hover {
+    background: black;
+    color: whitesmoke;
+  }
+
+  .kendaraan-show .subJudul {
+    padding: 20px;
+    font-size: 28px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .kendaraan-show .carousel img {
+    width: 100%;
+    height: auto;
+  }
+  .kendaraan-show .card {
+    width: 100%;
+    height: auto;
+    border: 0;
+  }
+  .kendaraan-show .card .card-header {
+    background: #696969;
+    text-align: center;
+    font-size: 32px;
+  }
+  .kendaraan-show .card .card-header span {
+    padding: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  .kendaraan-show .card .list-group {
+    border-radius: 50px;
+    padding-left: 20px;
+    text-transform: capitalize;
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+  .kendaraan-show .card .list-group .list-group-item {
+    border: 0;
+  }
+  .kendaraan-show .tombol {
+    display: inline-block;
+  }
+  .kendaraan-show .tombol .btn {
+    margin-left: 10px;
+    width: 210px;
+    font-size: 32px;
+  }
+}
+.problem {
+  margin-bottom: 140px;
+}
+.problem .subJudul {
+  padding: 20px;
+  font-size: 60px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.problem .menu {
+  margin-bottom: 32px;
+}
+.problem .menu .btn {
+  font-size: 20px;
+}
+.problem .table {
+  font-size: 20px;
+  text-align: center;
+}
+.problem .info {
+  font-size: 20px;
+}
+
+.problem-create {
+  margin-bottom: 140px;
+}
+.problem-create .card {
+  margin-left: 20%;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 40px;
+  box-shadow: 32px 40px 20px rgba(0, 0, 0, 0.8);
+}
+.problem-create .card .card-header {
+  font: italic small-caps bold 20px/50px Georgia, serif;
+  letter-spacing: 2px;
+  color: darkblue;
+  background-color: #696969;
+  border-bottom: 2px solid black;
+  border-radius: 38px 38px 20px 20px;
+}
+.problem-create .card .form-group {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.problem-create .card .form-group .label {
+  margin-bottom: 2px;
+  margin-left: 20px;
+}
+.problem-create .card .tombol {
+  text-align: center;
+}
+.problem-create .card .tombol .btn {
+  margin: 20px 90px 10px 90px;
+  font-size: 24px;
+}
+.problem-create .card .tombol .btn .fa-angle-left {
+  margin-right: 20px;
+}
+.problem-create .card .tombol .btn .fa-angle-right {
+  margin-left: 20px;
+}
+.problem-create .card .tombol .btn:hover {
+  background: black;
+  color: whitesmoke;
+}
+
+.problem-show {
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-left: 25%;
+}
+.problem-show .card {
+  width: 60%;
+  height: auto;
+  border: 0;
+}
+.problem-show .card .image {
+  padding: 60px;
+  width: 100%;
+  height: 500px;
+  border-radius: 50px 50px 0px 0px;
+}
+.problem-show .card span {
+  font-size: 32px;
+  border: none;
+  text-align: end;
+}
+.problem-show .card .card-header {
+  background: #696969;
+  position: relative;
+}
+.problem-show .card .card-header .title {
+  padding: 20px;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 32px;
+}
+.problem-show .card .list-group {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.problem-show .card .list-group .list-group-item {
+  padding: 20px;
+}
+.problem-show .card .tombol {
+  display: inline-block;
+  text-align: center;
+}
+.problem-show .card .tombol .btn {
+  width: 380px;
+  font-size: 32px;
+}
+
+@media screen and (max-width: 600px) {
+  .problem {
+    margin-bottom: 140px;
+  }
+  .problem .subJudul {
+    font-size: 40px;
+  }
+  .problem .menu {
+    margin-bottom: 20px;
+  }
+  .problem .menu .btn {
+    font-size: 14px;
+  }
+  .problem .table {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .problem-create .card {
+    margin-left: 4%;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 40px;
+    box-shadow: 32px 40px 20px rgba(0, 0, 0, 0.8);
+  }
+  .problem-create .card .card-header {
+    text-align: center;
+    font: italic small-caps bold 20px/50px Georgia, serif;
+    letter-spacing: 2px;
+    color: darkblue;
+    background-color: #696969;
+    border-bottom: 2px solid black;
+    border-radius: 38px 38px 20px 20px;
+  }
+  .problem-create .card .card-body {
+    border: 0px;
+  }
+  .problem-create .card .tombol {
+    text-align: center;
+  }
+  .problem-create .card .tombol .btn {
+    margin: 20px 40px 10px 40px;
+    font-size: 18px;
+  }
+  .problem-create .card .tombol .btn .fa-angle-left {
+    margin-right: 20px;
+  }
+  .problem-create .card .tombol .btn .fa-angle-right {
+    margin-left: 20px;
+  }
+  .problem-create .card .tombol .btn:hover {
+    background: black;
+    color: whitesmoke;
+  }
+
+  .problem-show {
+    margin-left: 0px;
+    margin-bottom: 10%;
+  }
+  .problem-show .card {
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    border: 0;
+  }
+  .problem-show .card .image {
+    padding: 40px;
+  }
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  font-family: "Times New Roman", Times, serif;
+}
+.wrapper .wrapper-content {
+  margin-top: 180px;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=main.css.map */

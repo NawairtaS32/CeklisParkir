@@ -1,0 +1,44 @@
+#mainHome{
+    .row{
+        margin: 40px;
+    }
+    .card{
+        font-size: 20px;
+        border: 0;
+        .card-title{
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .list-group-item{
+            border: 0px;
+        }
+
+        .btn{
+            margin-left: 140px;
+            border-radius: 20px;
+        }
+}
+}
+
+@media screen and (max-width: 600px){
+    #mainHome{
+        .card{
+            font-size: 20px;
+            .card-title{
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+            .list-group{
+                margin-bottom: 20px;
+            }
+
+            .btn{
+                margin-left: 140px;
+                margin-bottom: 100px;
+                border-radius: 20px;
+            }
+        }
+    }
+}
