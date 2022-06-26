@@ -22,7 +22,7 @@
         </div>
 
         <div class="row justify-content-md-center menu">
-            <div class="col col-sm-8">
+            <div class="col-4">
                 @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')
                     <a class="btn btn-success tambah" href="{{route('mobil.create')}}" role="button">Tambah Data Mobil</a>
                 @elseif (Auth::check() && Auth::user()->jabatan == 'Staff Petugas Lapangan')
@@ -32,12 +32,14 @@
                 @endif
             </div>
 
-            <div class="col col-sm-4">
+            <div class="col-8">
                 <form action="{{route('mobil.index')}}" method="GET" class="d-flex">
                     @csrf
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-4">
                         <input type="text" class="form-control" placeholder="Cari Data Kendaraan Mobil" name="cari" id="cari">
-                        <button class="btn btn-outline-secondary" id="cari" type="submit">Search</button>
+                        <button class="btn btn-outline-secondary" id="cari" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </div>  
                 </form>
             </div>

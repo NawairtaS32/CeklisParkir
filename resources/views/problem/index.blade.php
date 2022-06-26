@@ -22,10 +22,10 @@
         </div>
 
         <div class="row justify-content-md-center menu">
-            <div class="col col-sm-8">
-                <a class="btn btn-success tambah" href="{{route('problem.create')}}" role="button">Tambah Data Masalah</a>
-            </div>
-            @if (Auth::check() && Auth::user()->jabatan == 'Central Park Manager')
+            @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')
+                <div class="col col-sm-8">
+                    <a class="btn btn-success tambah" href="{{route('problem.create')}}" role="button">Tambah Data Masalah</a>
+                </div>
             @endif
 
             <div class="col col-sm-4">

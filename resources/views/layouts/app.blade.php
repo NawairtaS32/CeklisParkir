@@ -42,7 +42,9 @@
         <div class="wrapper-header">
             @include('layouts.header')
             @include('layouts.navslide')
-            @include('layouts.navbottom')
+        </div>
+        <div class="wrapper-menu">
+            @include('layouts.menu')
         </div>
 
         <div class="wrapper-content">

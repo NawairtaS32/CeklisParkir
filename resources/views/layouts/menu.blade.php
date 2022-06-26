@@ -1,5 +1,5 @@
 <div class="navbottom" id="navBottom">
-    <ul class="nav nav-pills nav-fill bg-dark navbar-dark fixed-bottom">
+    <ul class="nav nav-pills nav-fill fixed-top">
         <li class="nav-item">
             <a class="nav-link {{request()->is('home') ? 'active' : '' }}" href="{{ route('home') }}">
                 <span>

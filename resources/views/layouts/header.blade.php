@@ -1,11 +1,18 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('home') }}">
-            <span class="logo">
-                {{ config('app.name', 'Laravel') }}
-            </span>
-            <span class="lokasi">{{ Auth::user()->lokasi_kerja }}</span>
-            <img class="image" src="{{ asset ('imgUser/' .Auth::user()->gb_user) }}" alt="" >
+            <div class="row">
+                <div class="col-8">
+                    <span class="logo">
+                        {{ config('app.name', 'Laravel') }}
+                    </span>
+                    <br>
+                    <span class="lokasi">{{ Auth::user()->lokasi_kerja }}</span>
+                </div>
+                <div class="col-4">
+                    <img class="image" src="{{ asset ('imgUser/' .Auth::user()->gb_user) }}" alt="" >
+                </div>
+            </div>
         </a>
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">

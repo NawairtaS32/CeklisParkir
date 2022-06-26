@@ -172,7 +172,7 @@ class ProblemController extends Controller
             $image_customer     ->  move(public_path('imgProblem'), $new_image_customer); 
 
         } else {
-            $problem->waktu              = now();
+            $problem->waktu             = now();
             $problem->id_user           = Auth::id();
             $problem->name              = $request->name;
             $problem->nik               = $request->nik;

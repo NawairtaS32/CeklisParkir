@@ -19,7 +19,7 @@
         <div class="subJudul">Data Kendaraan Motor</div>
         
             <div class="row justify-content-md-center menu">
-                <div class="col col-sm-8">
+                <div class="col-4">
                     @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')
                         <a class="btn btn-primary" href="{{route('motor.create')}}" role="button">Tambah Data Motor</a>
                     @elseif (Auth::check() && Auth::user()->jabatan == 'Staff Petugas Lapangan')
@@ -30,12 +30,14 @@
                     @endif
                 </div>
 
-                <div class="col col-sm-2">
+                <div class="col-8">
                     <form action="{{route('motor.index')}}" method="GET">
                         @csrf
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="Cari Data Kendaraan Motor" name="cari" id="cari">
-                            <button class="btn btn-outline-secondary" id="cari" type="submit">Search</button>
+                            <button class="btn btn-outline-secondary" id="cari" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -93,6 +95,10 @@
                                         <i class="fa-solid fa-user-pen"></i>
                                     </a>                                
                                 @else (Auth::check() && Auth::user()->jabatan == 'Central Park Manager')
+                                    <a class="btn btn-info btn-sm" href="{{ route('motor.show',$datas->id) }}">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </a>  
+                                    
                                     <a class="btn btn-primary btn-sm" href="{{ route('motor.print',$datas->id) }}">
                                         <i class="fa-solid fa-print"></i>
                                     </a>

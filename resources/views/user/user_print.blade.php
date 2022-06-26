@@ -60,7 +60,7 @@
 <body class="main">
     <div class="print_all container ">
         <div class="judul">
-            Laporan Data Kendaraan Mobil
+            Laporan Data Petugas Parkir
         </div>
         <br><br>
         <div class="user">
@@ -81,7 +81,7 @@
                 <tr>
                     <td>Jabatan</td>
                     <td>:</td>
-                    <td>{{ Auth::user()->jabatan }}</td>
+                    <td>{{ Auth::user()->jabatan}}</td>
                 </tr>
                 <tr>
                     <td>Lokasi Kerja</td>

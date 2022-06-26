@@ -1,7 +1,4 @@
 #mainHome{
-    .row{
-        margin: 40px;
-    }
     .card{
         font-size: 20px;
         border: 0;
@@ -18,11 +15,12 @@
             margin-left: 140px;
             border-radius: 20px;
         }
-}
+    }   
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 720px){
     #mainHome{
+        margin-top: 220px;
         .card{
             font-size: 20px;
             .card-title{
