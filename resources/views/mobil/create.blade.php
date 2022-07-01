@@ -17,7 +17,7 @@
                             <label for="nopol">Nomor polisi Kendaraan :</label>
                                 <input type="text" class="form-control" placeholder="" name="nopol" id="nopol" value="{{ old('nopol') }}" >
                                 @foreach ( $errors->get('nopol') as $msg)
-                                <p class="text-danger">{{$msg}} </p>       
+                                <p class="text-danger">sebelum mengisi cek nopol sudah ada atau belum ada </p>      
                                 @endforeach
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                             <label for="type">Type Kendaraan</label>
                             <input type="text" class="form-control" placeholder="" name="type" id="type" value="{{ old('type') }}" >
                             @foreach ( $errors->get('type') as $msg)
-                                <p class="text-danger">harus di isi </p>            
+                                <p class="text-danger">Isilah sesuai dengan prosedur </p>               
                             @endforeach
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                             <label for="area_parkir">Area Parkir</label>
                             <input type="text" class="form-control" placeholder="" name="area_parkir" id="area_parkir" value="{{ old('area_parkir') }}">
                             @foreach ( $errors->get('area_parkir') as $msg)
-                                <p class="text-danger">harus di isi </p>            
+                                <p class="text-danger">isi lah sesuai prosedur </p>          
                             @endforeach
                         </div>
                     </div>
@@ -51,18 +51,18 @@
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
                             <label>Kondisi Bagian Depan :</label><br>
-                                <input type="file" id="gb_depan"  name="gb_depan" value="{{ old('gb_depan') }}" >
+                                <input type="file" class="form-control" id="gb_depan"  name="gb_depan" value="{{ old('gb_depan') }}" >
                                 @foreach ( $errors->get('gb_depan') as $msg)
-                                    <p class="text-danger">{{$msg}} </p>            
+                                <p class="text-danger">Ambilah gambar sesuai dengan prosedur </p>                     
                                 @endforeach
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
                             <label>Kondisi Bagian Kanan :</label><br>
-                            <input type="file" id="gb_kanan"  name="gb_kanan" value="{{ old('gb_kanan') }}">
+                            <input type="file" class="form-control" id="gb_kanan"  name="gb_kanan" value="{{ old('gb_kanan') }}">
                                 @foreach ( $errors->get('gb_kanan') as $msg)
-                                    <p class="text-danger">{{$msg}}</p>            
+                                <p class="text-danger">Ambilah gambar sesuai dengan prosedur </p>                      
                                 @endforeach
                         </div>
                     </div>
@@ -72,16 +72,16 @@
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
                             <label>Kondisi Bagian Belakang :</label><br>
-                            <input type="file" id="gb_belakang"  name="gb_belakang" value="{{ old('gb_belakang') }}">
+                            <input type="file" class="form-control" id="gb_belakang"  name="gb_belakang" value="{{ old('gb_belakang') }}">
                                 @foreach ( $errors->get('gb_belakang') as $msg)
-                                    <p class="text-danger">{{$msg}}</p>            
+                                <p class="text-danger">Ambilah gambar sesuai dengan prosedur </p>                      
                                 @endforeach
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
                             <label>Kondisi Bagian Kiri :</label><br>
-                            <input type="file" id="gb_kiri"  name="gb_kiri" value="{{ old('gb_kiri') }}">
+                            <input type="file" class="form-control" id="gb_kiri"  name="gb_kiri" value="{{ old('gb_kiri') }}">
                             @foreach ( $errors->get('gb_kiri') as $msg)
                                 <p class="text-danger">harus di isi sesuai dengan kondisi kendaraan</p>            
                             @endforeach
@@ -93,18 +93,18 @@
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">        
                             <label for="kondisi">Kondisi Kendaraan  </label>
-                            <input type="text" class="form-control" name="kondisi" id="kondisi" rows="3" value="{{ old('kondisi') }}"></input>
+                            <input type="file" class="form-control" name="kondisi" id="kondisi" rows="3" value="{{ old('kondisi') }}"></input>
                             @foreach ( $errors->get('kondisi') as $msg)
-                                <p class="text-danger">harus di isi </p>            
+                            <p class="text-danger">Ambilah gambar sesuai dengan prosedur </p>                       
                             @endforeach
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">        
                             <label for="status">Status Kendaraan</label>
-                            <input type="text" class="form-control" placeholder="" name="status" id="status" value="{{ old('status') }}"></input>
+                            <input type="file" class="form-control" placeholder="" name="status" id="status" value="{{ old('status') }}"></input>
                             @foreach ( $errors->get('status') as $msg)
-                                <p class="text-danger">harus di isi </p>            
+                                <p class="text-danger">Isilah sesuai dengan prosedur </p>                
                             @endforeach
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                     <label for="ket">Keterangan</label>
                     <input type="text" class="form-control" placeholder="" name="ket" id="ket" value="{{ old('ket') }}"></input>
                     @foreach ( $errors->get('ket') as $msg)
-                        <p class="text-danger">harus di isi </p>            
+                        <p class="text-danger">Isilah sesuai dengan prosedur </p>            
                     @endforeach
                 </div>
         

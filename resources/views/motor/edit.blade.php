@@ -29,16 +29,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-6 col-md-6">
-                        <div class="form-group">        
-                            <label for="area_parkir">Area Parkir</label>
-                            <input type="text" class="form-control" placeholder="" name="area_parkir" id="area_parkir" value="{{ $motor->area_parkir }}">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6">
-                         
-                    </div>
+
+                <div class="form-group">        
+                    <label for="area_parkir">Area Parkir</label>
+                    <input type="text" class="form-control" placeholder="" name="area_parkir" id="area_parkir" value="{{ $motor->area_parkir }}">
                 </div>
                 
                 <div class="row">

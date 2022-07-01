@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    @notifyCss
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
@@ -34,6 +34,7 @@
     <script type="text/javascript" src="{{ asset('js/app.js') }}" defer></script>
     <script type="text/javascript" src="{{ asset ('js/main.js') }}" defer></script>
     @stack('page-scripts')
+    
 
     <link rel="shortcut icon" href="{{ asset ('favicon_io/android-chrome-192x192.png') }}" type="image/x-icon">
 </head>
@@ -52,7 +53,7 @@
         </div>
     </div>
 
-
+    @notifyJs
 </body>
 
 </html>

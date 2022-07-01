@@ -20,14 +20,14 @@
         <span class="subJudul">Data Petugas Parkir</span>   
 
         <div class="row justify-content-md-center menu">
-            <div class="col col-sm-8">
+            <div class="col col-sm-8 col-6">
                 <a class="btn btn-info" href="{{route('user.create')}}" role="button">Tambah Data</a>
                 @if (Auth::check() && Auth::user()->jabatan == 'Central Park Manager')
                     <a class="btn btn-primary tambah" href="{{route('user.user_print')}}" role="button">Cetak Data User</a>
                 @endif
             </div>
 
-            <div class="col col-sm-2">
+            <div class="col col-sm-2 col-6">
                 <form action="{{route('user.index')}}" method="GET" class="d-flex">
                     @csrf
                     <div class="input-group">

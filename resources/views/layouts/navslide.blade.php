@@ -3,14 +3,11 @@
     </button>
     <div class="offcanvas-header">
         <img class="image" src="{{ asset ('imgUser/' .Auth::user()->gb_user) }}" alt="" >
-        <ul class="subJudul">
-            <li>
-                <a href="#" class="profil">
-                    {{ Auth::user()->panggilan }}
-                    <i class="fa-solid fa-circle-chevron-down rotate-profil"></i>
-                </a>
-            </li>
-        </ul>
+        <div class="subJudul">
+            <a href="#" class="profil">
+                {{ Auth::user()->panggilan }}
+            </a>
+        </div>
     </div>
     <div class="offcanvas-body">
         <ul class="menu-profil">

@@ -86,6 +86,9 @@
                         <a href="{{ route('problem.index') }}" class="btn btn-primary">Data Kendala/Poblem</a>
                     </div>
                 </div>
+                <br><br>
+                <br><br>
+                <br><br>
             </div>
         </div>
     </div>
