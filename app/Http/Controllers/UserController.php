@@ -33,6 +33,7 @@ class UserController extends Controller
             $data_user   = User::where('panggilan', 'like', "%".$request->cari."%")
             ->orWhere('name', 'like', "%".$request->cari."%")
             ->orWhere('nik', 'like', "%".$request->cari."%")
+            ->orWhere('jabatan', 'like', "%".$request->cari."%")
             ->paginate(10);
         }
         // dd($data_user);

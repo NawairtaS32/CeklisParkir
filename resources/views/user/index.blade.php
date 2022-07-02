@@ -20,14 +20,16 @@
         <span class="subJudul">Data Petugas Parkir</span>   
 
         <div class="row justify-content-md-center menu">
-            <div class="col col-sm-8 col-6">
-                <a class="btn btn-info" href="{{route('user.create')}}" role="button">Tambah Data</a>
-                @if (Auth::check() && Auth::user()->jabatan == 'Central Park Manager')
-                    <a class="btn btn-primary tambah" href="{{route('user.user_print')}}" role="button">Cetak Data User</a>
+            
+            <div class="col-4">
+                @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')
+                    <a class="btn btn-primary" href="{{route('user.create')}}" role="button">Tambah Data user</a>
+                @else (Auth::check() && Auth::user()->jabatan == 'Central Park Manager')
+                    <a class="btn btn-success" href="{{route('user.user_print')}}" role="button">Cetak Data user</a>
                 @endif
             </div>
 
-            <div class="col col-sm-2 col-6">
+            <div class="col-8">
                 <form action="{{route('user.index')}}" method="GET" class="d-flex">
                     @csrf
                     <div class="input-group">
@@ -88,7 +90,7 @@
         <div class="row justify-content-md-center pagination p-2">
             @if($data_user->hasPages())
             <div class="card-footer">
-                    jumlah motor :  {{$jumlah_user}}
+                    jumlah user :  {{$jumlah_user}}
                     {{ $data_user->links() }}
                 </div>
             @endif

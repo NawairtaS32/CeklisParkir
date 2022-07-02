@@ -24,18 +24,6 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-
-    <!-- jquery -->
-    <script type="text/javascript" src="{{ asset ('jquery-3.6.0.js') }}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-
-    <!-- Scripts -->
-    <script type="text/javascript" src="{{ asset('js/app.js') }}" defer></script>
-    <script type="text/javascript" src="{{ asset ('js/main.js') }}" defer></script>
-    @stack('page-scripts')
-    
-
     <link rel="shortcut icon" href="{{ asset ('favicon_io/android-chrome-192x192.png') }}" type="image/x-icon">
 </head>
 <body>
@@ -53,7 +41,14 @@
         </div>
     </div>
 
-    @notifyJs
+    <!-- Scripts -->
+    <script type="text/javascript" src="{{ asset('js/app.js') }}" defer></script>
+    <script type="text/javascript" src="{{ asset ('js/main.js') }}" defer></script>
+    @stack('page-scripts')
+
+    <!-- jquery -->
+    <script type="text/javascript" src="{{ asset ('jquery-3.6.0.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
 </html>
