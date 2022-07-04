@@ -156,8 +156,18 @@
                     
 
                     <div class="tombol">
-                        <button type="submit" class="btn btn-success">Simpan</button> 
-                        <a href="/user" class="btn btn-warning">Batal</a>
+                        <div class="row">
+                            <div class="col-sm-6 col-6">
+                                <a class="btn btn-success" href="{{route('user.index')}}"> 
+                                    Back
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-6">
+                                <button type="submit" class="btn btn-primary">
+                                    Next
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
