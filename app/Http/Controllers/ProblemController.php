@@ -70,7 +70,7 @@ class ProblemController extends Controller
             'jk'                =>  'required',
             'status'            =>  'required',
             'alamat'            =>  'required',
-            'tlp'               =>  'required',
+            'tlp'               =>  'required|min:12',
             'j_kendaraan'       =>  'required',
             'no_stnk'           =>  'required',
             'kejadian'          =>  'required',

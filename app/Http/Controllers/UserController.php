@@ -67,12 +67,12 @@ class UserController extends Controller
             'jk'=>'required',
             'status'=>'required',
             'alamat'=>'required',
-            'tlp'=>'required',
+            'tlp'=>'required|min:12',
             'jabatan'=>'required',
             'lokasi_kerja'=>'required',
             'gb_user'=>'required|image|mimes:jpeg,jpg,png',
             'email'=>'required|email|unique:users',
-            'password'=>'required|confirmed|min:4',
+            'password'=>'required|confirmed|min:4|max:8',
             ]);
     
             $user = new User;

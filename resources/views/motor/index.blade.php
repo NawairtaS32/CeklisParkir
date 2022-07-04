@@ -19,18 +19,18 @@
         <div class="subJudul">Data Kendaraan Motor</div>
         
             <div class="row justify-content-md-center menu">
-                <div class="col-4">
+                <div class="col-sm-8 col-4">
                     @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')
-                        <a class="btn btn-primary" href="{{route('motor.create')}}" role="button">Tambah Data Motor</a>
+                        <a class="btn btn-primary" href="{{route('motor.create')}}" role="button">Tambah Data </a>
                     @elseif (Auth::check() && Auth::user()->jabatan == 'Staff Petugas Lapangan')
-                        <a class="btn btn-primary" href="{{route('motor.create')}}" role="button">Tambah Data Motor</a>                        
+                        <a class="btn btn-primary" href="{{route('motor.create')}}" role="button">Tambah Data </a>                        
                     @else (Auth::check() && Auth::user()->jabatan == 'Central Park Manager')
-                        <a class="btn btn-success" href="{{route('motor.motor_print')}}" role="button">Cetak Data Motor</a>
+                        <a class="btn btn-success" href="{{route('motor.motor_print')}}" role="button">Cetak Data </a>
                                         
                     @endif
                 </div>
 
-                <div class="col-8">
+                <div class="col-sm-4 col-8">
                     <form action="{{route('motor.index')}}" method="GET">
                         @csrf
                         <div class="input-group mb-3">

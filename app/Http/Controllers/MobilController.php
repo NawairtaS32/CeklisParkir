@@ -32,6 +32,7 @@ class MobilController extends Controller
 
         if (request('cari')) {
             $data_mobil   = Mobil::where('nopol', 'like', "%".$request->cari."%")
+            ->orWhere('type', 'like', "%".$request->cari."%")
             ->orWhere('status', 'like', "%".$request->cari."%")
             ->paginate(10);
         }

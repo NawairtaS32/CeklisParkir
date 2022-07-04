@@ -49,20 +49,10 @@
 
             .tombol{
                 text-align: center;
+                margin: 20px 0px 20px 0px;
                     .btn{
-                        margin: 20px 90px 10px 90px;
-                        font-size: 24px;
-                            .fa-angle-left{
-                                margin-right: 20px;
-                            }
-                            .fa-angle-right{
-                                margin-left: 20px;
-                            }
-                            &:hover{
-                                background: black;
-                                color: whitesmoke;
-                            }
-
+                        width: 100%;
+                        font-size: 32px;
                     }
             }
     }
@@ -116,7 +106,7 @@
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 720px){
     .problem{
         margin-bottom: 140px;
             .subJudul{
@@ -153,25 +143,15 @@
                 }
                 .card-body{
                     border: 0px;
-                }
 
-                .tombol{
-                    text-align: center;
-                        .btn{
-                            margin: 20px 40px 10px 40px;
-                            font-size: 18px;
-                                .fa-angle-left{
-                                    margin-right: 20px;
-                                }
-                                .fa-angle-right{
-                                    margin-left: 20px;
-                                }
-                                &:hover{
-                                    background: black;
-                                    color: whitesmoke;
-                                }
-    
-                        }
+                    .tombol{
+                        text-align: center;
+                        margin: 20px 0px 20px 0px;
+                            .btn{
+                                width: 100%;
+                                font-size: 20px;
+                            }
+                    }
                 }
         }
     }

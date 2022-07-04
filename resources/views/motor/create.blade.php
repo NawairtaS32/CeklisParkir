@@ -159,22 +159,24 @@
                 </div>
         
                 <div class="tombol">
-                    <a class="btn btn-success" href="{{route('motor.index')}}"> 
-                        <i class="fas fa-angle-left"></i>
-                        Back
-                    </a>
-                    <button type="submit" class="btn btn-primary">
-                        Next
-                        <i class="fas fa-angle-right"></i>
-                    </button>
+                    <div class="row">
+                        <div class="col-sm-6 col-6">
+                            <a class="btn btn-success" href="{{route('motor.index')}}"> 
+                                Back
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-6">
+                            <button type="submit" class="btn btn-primary">
+                                Next
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
-
-
-<br><br><br><br>
+<br><br><br>
 
 @endsection
 

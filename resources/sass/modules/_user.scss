@@ -52,14 +52,12 @@
                 }
 
                 .tombol{
-                    margin: 50px;
-                    display: inline;
+                    text-align: center;
+                    margin: 20px 0px 20px 0px;
                         .btn{
-                            width: 40%;
-                            padding: 10px;
-                            border-radius: 20px;
-                            margin: 10px;
-                            font-size: 20px;
+                            border-radius: 50px;
+                            width: 100%;
+                            font-size: 32px;
                         }
                 }
         }
@@ -141,11 +139,12 @@
                     }
 
                     .tombol{
-                        margin-left: 40%;
+                        text-align: center;
+                        margin: 20px 0px 20px 0px;
                             .btn{
-                                border-radius: 20px;
-                                margin: 10px;
-                                font-size: 20px;
+                                border-radius: 50px;
+                                width: 100%;
+                                font-size: 24px;
                             }
                     }
             }

@@ -13,7 +13,7 @@
                 @csrf
 
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label class="label" for="nik">NIK KTP :</label>
                             <input type="text" class="form-control" placeholder="" name="nik" id="nik" value="{{ old('nik') }}" >
@@ -22,7 +22,7 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label class="label" for="negara">Negara :</label>
                             <input type="text" class="form-control" placeholder="" name="negara" id="negara" value="{{ old('negara') }}" >
@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 ">
                         <div class="form-group">
                             <label class="label" for="name">Nama Customer :</label>
                             <input type="text" class="form-control" placeholder="" name="name" id="name" value="{{ old('name') }}" >
@@ -43,7 +43,7 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label class="label" for="agama">Agama :</label>
                             <input type="text" class="form-control" placeholder="" name="agama" id="agama" value="{{ old('agama') }}" >
@@ -55,7 +55,7 @@
                 </div>
                 
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label class="label" for="pekerjaan">Pekerjaan :</label>
                             <input type="text" class="form-control" placeholder="" name="pekerjaan" id="pekerjaan" value="{{ old('pekerjaan') }}" >
@@ -64,7 +64,7 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 ">
                         <div class="form-group">
                             <label class="label" for="tlp">No Tlp/HP User</label>
                             <input type="text" class="form-control" name="tlp" value="{{ old('tlp') }}">
@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label class="label" for="jk">Jenis Kelamin</label>
                             <div class="form-check">
@@ -89,7 +89,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label for="status"> Status Hubungan</label>
                             <div class="form-check">
@@ -121,7 +121,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6">
                         <div class="form-group">
                         <label class="label" for="nopol"> Nopol :</label>
                             <input type="text" class="form-control" placeholder="" name="nopol" id="nopol" value="{{ old('nopol') }}" >
@@ -130,7 +130,7 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label class="label" for="no_stnk"> Nomor stnk:</label>
                                 <input type="text" class="form-control" placeholder="" name="no_stnk" id="no_stnk" value="{{ old('no_stnk') }}" >
@@ -142,7 +142,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label class="label" for="j_kendaraan"> Jenis Kendaraan:</label>
                                 <input type="text" class="form-control" placeholder="" name="j_kendaraan" id="j_kendaraan" value="{{ old('j_kendaraan') }}" >
@@ -151,7 +151,7 @@
                                 @endforeach
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label class="label" for="kejadian">Kejadian :</label>
                                 <input type="text" class="form-control" placeholder="" name="kejadian" id="kejadian" value="{{ old('kejadian') }}" >
@@ -171,22 +171,24 @@
                 </div>
 
                 <div class="form-group">        
-                    <label for="penanganan">Penanganan Kondisi Kendaraan :  </label>
+                    <label for="penanganan"> Penanganan kejadian :  </label>
                     <input type="text" class="form-control" name="penanganan" id="penanganan" rows="6" value="{{ old('penanganan') }}"></input>
                     @foreach ( $errors->get('penanganan') as $msg)
                         <p class="text-danger">harus di isi </p>            
                     @endforeach
                 </div>
         
-                <div class="tombol">
-                    <a class="btn btn-success" href="{{route('problem.index')}}"> 
-                        <i class="fas fa-angle-left"></i>
-                        Back
-                    </a>
-                    <button type="submit" class="btn btn-primary">
-                        Next
-                        <i class="fas fa-angle-right"></i>
-                    </button>
+                <div class="row tombol">
+                    <div class="col-sm-6 col-6">
+                        <a class="btn btn-success" href="{{route('problem.index')}}"> 
+                            Back
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <button type="submit" class="btn btn-primary">
+                            Next
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>

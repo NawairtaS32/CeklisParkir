@@ -46,14 +46,14 @@
                         <div class="form-group">
                             <label>Kondisi Bagian Depan :</label><br>
                                 <input type="file" id="gb_depan"  name="gb_depan" value="{{ old('gb_depan') }}" >
-                                <img class="image" style="width: 140px" src="{{ asset ('imgMbl/' . $mobil->gb_depan) }}" alt="" >
+                                <img class="image" src="{{ asset ('imgMbl/' . $mobil->gb_depan) }}" alt="" >
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
                             <label>Kondisi Bagian Kanan :</label><br>
                             <input type="file" id="gb_kanan"  name="gb_kanan" value="{{ old('gb_kanan') }}">
-                            <img class="image" style="width: 140px" src="{{ asset ('imgMbl/' . $mobil->gb_kanan) }}" alt="" >
+                            <img class="image" src="{{ asset ('imgMbl/' . $mobil->gb_kanan) }}" alt="" >
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                         <div class="form-group">
                             <label>Kondisi Bagian Belakang :</label><br>
                             <input type="file" id="gb_belakang"  name="gb_belakang" value="{{ old('gb_belakang') }}">
-                            <img class="image" style="width: 140px" src="{{ asset ('imgMbl/' . $mobil->gb_belakang) }}" alt="" >
+                            <img class="image" src="{{ asset ('imgMbl/' . $mobil->gb_belakang) }}" alt="" >
 
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                         <div class="form-group">
                             <label>Kondisi Bagian Kiri :</label><br>
                             <input type="file" id="gb_kiri"  name="gb_kiri" value="{{ old('gb_kiri') }}">
-                            <img class="image" style="width: 140px" src="{{ asset ('imgMbl/' . $mobil->gb_kiri) }}" alt="" >
+                            <img class="image" src="{{ asset ('imgMbl/' . $mobil->gb_kiri) }}" alt="" >
                         </div>
                     </div>
                 </div> 
@@ -116,35 +116,40 @@
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">        
                             <label for="kondisi">Kondisi Kendaraan  </label>
-                            <textarea class="form-control" name="kondisi" id="kondisi" rows="3" value="{{ old('kondisi') }}"></textarea>
+                            <input class="form-control" name="kondisi" id="kondisi" rows="3" value="{{ old('kondisi') }}"></input>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">        
                             <label for="status">Status Kendaraan</label>
-                            <textarea class="form-control" placeholder="" name="status" id="status" value="{{ old('status') }}" rows="3"></textarea>
+                            <input class="form-control" placeholder="" name="status" id="status" value="{{ old('status') }}" rows="3"></input>
                         </div>
                     </div>
                 </div>                
 
                 <div class="form-group">        
                     <label for="ket">Keterangan</label>
-                    <textarea class="form-control" placeholder="" name="ket" id="ket" value="{{ old('ket') }}" rows="3"></textarea>
+                    <input class="form-control" placeholder="" name="ket" id="ket" value="{{ old('ket') }}" rows="3"></input>
                 </div>
         
                 <div class="tombol">
-                    <a class="btn btn-success" href="{{route('mobil.index')}}"> 
-                        <i class="fas fa-angle-left"></i>
-                        Back
-                    </a>
-                    <button type="submit" class="btn btn-primary">
-                        Next
-                        <i class="fas fa-angle-right"></i>
-                    </button>
+                    <div class="row">
+                        <div class="col-sm-6 col-6">
+                            <a class="btn btn-success" href="{{route('mobil.index')}}"> 
+                                Back
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-6">
+                            <button type="submit" class="btn btn-primary">
+                                Next
+                            </button>
+                        </div>
+                      </div>
                 </div>
             </form>
         </div>
     </div>
+
 </div>
 
 @endsection

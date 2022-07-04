@@ -22,21 +22,21 @@
         </div>
 
         <div class="row justify-content-md-center menu">
-            <div class="col-4">
+            <div class="col-sm-8 col-4">
                 @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')
-                    <a class="btn btn-success tambah" href="{{route('mobil.create')}}" role="button">Tambah Data Mobil</a>
+                    <a class="btn btn-success tambah" href="{{route('mobil.create')}}" role="button">Tambah Data</a>
                 @elseif (Auth::check() && Auth::user()->jabatan == 'Staff Petugas Lapangan')
-                    <a class="btn btn-success tambah" href="{{route('mobil.create')}}" role="button">Tambah Data Mobil</a>
+                    <a class="btn btn-success tambah" href="{{route('mobil.create')}}" role="button">Tambah Data</a>
                 @else (Auth::check() && Auth::user()->jabatan == 'Central Park Manager')
-                    <a class="btn btn-primary tambah" href="{{route('mobil.mobil_print')}}" role="button">Cetak Data Mobil</a>     
+                    <a class="btn btn-primary tambah" href="{{route('mobil.mobil_print')}}" role="button">Cetak Data</a>     
                 @endif
             </div>
 
-            <div class="col-8">
+            <div class="col-sm-4 col-8">
                 <form action="{{route('mobil.index')}}" method="GET" class="d-flex">
                     @csrf
                     <div class="input-group mb-4">
-                        <input type="text" class="form-control" placeholder="Cari Data Kendaraan Mobil" name="cari" id="cari">
+                        <input type="text" class="form-control" placeholder="Cari nopol/type/status pada data kendaraan mobil" name="cari" id="cari">
                         <button class="btn btn-outline-secondary" id="cari" type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
@@ -51,7 +51,7 @@
                         <th>No</th>
                         <th>tanggal</th>
                         <th>Nopol</th>
-                        <th>Merek</th>
+                        <th>Type</th>
                         <th>Petugas</th>
                         <th>Area</th>
                         <th>lokasi</th>
@@ -119,6 +119,9 @@
             @endif
         </div>
     </div>
+    <br>
+    <br>
+    <br>
 @else
     <div class="container alert alert-warning">
         <h2>

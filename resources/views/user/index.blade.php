@@ -21,15 +21,15 @@
 
         <div class="row justify-content-md-center menu">
             
-            <div class="col-4">
+            <div class="col-sm-8 col-4">
                 @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')
-                    <a class="btn btn-primary" href="{{route('user.create')}}" role="button">Tambah Data user</a>
+                    <a class="btn btn-primary" href="{{route('user.create')}}" role="button">Tambah Data</a>
                 @else (Auth::check() && Auth::user()->jabatan == 'Central Park Manager')
-                    <a class="btn btn-success" href="{{route('user.user_print')}}" role="button">Cetak Data user</a>
+                    <a class="btn btn-success" href="{{route('user.user_print')}}" role="button">Cetak Data</a>
                 @endif
             </div>
 
-            <div class="col-8">
+            <div class="col-sm-4 col-8">
                 <form action="{{route('user.index')}}" method="GET" class="d-flex">
                     @csrf
                     <div class="input-group">

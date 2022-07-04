@@ -13,13 +13,13 @@
                 @csrf
                 
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-6">
                         <div class="form-group">
                             <label class="label" for="nik">NIK KTP :</label>
                             <input type="text" class="form-control" placeholder="" name="nik" id="nik" value="{{$problem->nik}}" >
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-6">
                         <div class="form-group">
                             <label class="label" for="negara">Negara :</label>
                             <input type="text" class="form-control" placeholder="" name="negara" id="negara" value="{{$problem->negara}}" >
@@ -28,13 +28,13 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-8">
                         <div class="form-group">
                             <label class="label" for="name">Nama Customer :</label>
                             <input type="text" class="form-control" placeholder="" name="name" id="name" value="{{$problem->name}}" >
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-4">
                         <div class="form-group">
                             <label class="label" for="agama">Agama :</label>
                             <input type="text" class="form-control" placeholder="" name="agama" id="agama" value="{{$problem->agama}}" >
@@ -43,13 +43,13 @@
                 </div>
                 
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-6">
                         <div class="form-group">
                             <label class="label" for="pekerjaan">Pekerjaan :</label>
                             <input type="text" class="form-control" placeholder="" name="pekerjaan" id="pekerjaan" value="{{$problem->pekerjaan}}" >
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-6">
                         <div class="form-group">
                             <label class="label" for="tlp">No Tlp/HP User</label>
                             <input type="text" class="form-control" name="tlp" value="{{$problem->tlp}}">
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-6">
                         <div class="form-group">
                             <label class="label" for="jk">Jenis Kelamin</label>
                             <div class="form-check">
@@ -71,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-6">
                         <div class="form-group">
                             <label for="status"> Status Hubungan</label>
                             <div class="form-check">
@@ -99,14 +99,14 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-6">
                         <div class="form-group">
                         <label class="label" for="nopol"> Nopol :</label>
                             <input type="text" class="form-control" placeholder="" name="nopol" id="nopol" value="{{$problem->nopol}}" >
                             
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-6">
                         <div class="form-group">
                             <label class="label" for="no_stnk"> Nomor stnk:</label>
                                 <input type="text" class="form-control" placeholder="" name="no_stnk" id="no_stnk" value="{{$problem->no_stnk}}" >
@@ -115,13 +115,13 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-6">
                         <div class="form-group">
                             <label class="label" for="j_kendaraan"> Jenis Kendaraan:</label>
                                 <input type="text" class="form-control" placeholder="" name="j_kendaraan" id="j_kendaraan" value="{{$problem->j_kendaraan}}" >
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-6">
                         <div class="form-group">
                             <label class="label" for="kejadian">Kejadian :</label>
                                 <input type="text" class="form-control" placeholder="" name="kejadian" id="kejadian" value="{{$problem->kejadian}}" >
@@ -139,15 +139,17 @@
                     <input type="text" class="form-control" name="penanganan" id="penanganan" rows="6" value="{{$problem->penanganan}}"></input>
                 </div>
 
-                <div class="tombol">
-                    <a class="btn btn-success" href="{{route('problem.index')}}"> 
-                        <i class="fas fa-angle-left"></i>
-                        Back
-                    </a>
-                    <button type="submit" class="btn btn-primary">
-                        Next
-                        <i class="fas fa-angle-right"></i>
-                    </button>
+                <div class="row tombol">
+                    <div class="col-sm-6 col-6">
+                        <a class="btn btn-success" href="{{route('problem.index')}}"> 
+                            Back
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <button type="submit" class="btn btn-primary">
+                            Next
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>

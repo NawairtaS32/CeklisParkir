@@ -23,12 +23,12 @@
 
         <div class="row justify-content-md-center menu">
             @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')
-                <div class="col col-sm-8">
-                    <a class="btn btn-success tambah" href="{{route('problem.create')}}" role="button">Tambah Data Masalah</a>
+                <div class="col-sm-8 col-4">
+                    <a class="btn btn-success tambah" href="{{route('problem.create')}}" role="button">Tambah Data</a>
                 </div>
             @endif
 
-            <div class="col col-sm-4">
+            <div class="col-sm-4 col-8">
                 <form action="{{route('problem.index')}}" method="GET" class="d-flex">
                     @csrf
                     <div class="input-group mb-3">
