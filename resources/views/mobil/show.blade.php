@@ -109,11 +109,20 @@
             </div>
 
             <div class="tombol">
-                <a class="btn btn-primary" href="{{route('mobil.index')}}"> Back</a>
-                <a class="btn btn-warning" href="{{ route('mobil.edit',$mobil->id) }}">Edit</a>
+                <div class="row">
+                    <div class="col-sm-6 col-6">
+                        <a class="btn btn-primary" href="{{route('mobil.index')}}"> Back</a>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <a class="btn btn-warning" href="{{ route('mobil.edit',$mobil->id) }}">Edit</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
 @endsection
 
 @push('page-scripts')

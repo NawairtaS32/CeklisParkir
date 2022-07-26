@@ -28,16 +28,12 @@ class MobilController extends Controller
     {
         $jumlah_mobil = Mobil::count();
         $cari = $request->cari;
-        $data_mobil = Mobil::latest()->paginate(10);
+        $data_mobil = Mobil::latest()->paginate(50);
 
         if (request('cari')) {
             $data_mobil   = Mobil::where('nopol', 'like', "%".$request->cari."%")
             ->orWhere('type', 'like', "%".$request->cari."%")
             ->orWhere('status', 'like', "%".$request->cari."%")
-            ->paginate(10);
-        }
-        if (request('cari_user')) {
-            $data_mobil   =Auth::where('name', 'like', "%".$request->cari."%")
             ->paginate(10);
         }
         return view('mobil.index', compact('data_mobil','jumlah_mobil','cari'));
@@ -230,7 +226,7 @@ class MobilController extends Controller
         return $pdf->stream();
     }
 
-    public function mobil_print(Request $reques)
+    public function mobil_print()
     {
         $jumlah_mobil = Mobil::count();
         $data_mobil = Mobil::latest()->paginate(50);

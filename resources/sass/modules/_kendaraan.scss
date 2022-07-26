@@ -109,11 +109,13 @@
 
         }
         .tombol{
-            display: inline-block;
+            text-align: center;
+            margin: 20px 0px 20px 0px;
             .btn{
-                width: 530px;
-                font-size: 32px;
-            }
+                    border-radius: 60px;
+                    width: 100%;
+                    font-size: 32px;
+                }
         }
 }
 
@@ -222,12 +224,12 @@
 
         }
         .tombol{
-            display: inline-block;
-            .btn{
-                margin-left: 10px;
-                width: 210px;
-                font-size: 32px;
-            }
+            text-align: center;
+            margin: 20px 0px 20px 0px;
+                .btn{
+                    width: 100%;
+                    font-size: 20px;
+                }
         }
     }
     

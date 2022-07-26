@@ -95,12 +95,12 @@
             }
         }
         .tombol{
-            display: inline-block;
             text-align: center;
-            .btn{
-                width: 380px;
-                font-size: 32px;
-            }
+            margin: 20px 0px 20px 0px;
+                .btn{
+                    width: 100%;
+                    font-size: 32px;
+                }
         }
         
     }
@@ -168,6 +168,21 @@
                         padding: 40px;
                     }
             }
+
+            .card-body{
+                border: 0px;
+
+                .tombol{
+                    text-align: center;
+                    margin: 20px 0px 20px 0px;
+                        .btn{
+                            width: 100%;
+                            font-size: 20px;
+                        }
+                }
+            }
+
+            
     }
     
 }

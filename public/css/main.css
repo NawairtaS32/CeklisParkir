@@ -244,7 +244,6 @@
   .navbar .navbar-brand .lokasi {
     font-size: 25px;
   }
-
   .navbottom .nav-pills {
     position: fixed;
     z-index: 10;
@@ -278,7 +277,6 @@
     text-align: center;
     font-size: 20px;
   }
-
   .offcanvas {
     width: 70%;
   }
@@ -539,7 +537,6 @@
     font-size: 20px;
     text-align: center;
   }
-
   .user {
     margin: 40px 40px 40px 20px;
     width: 90%;
@@ -571,7 +568,6 @@
     width: 100%;
     font-size: 24px;
   }
-
   .user-create {
     width: 100%;
   }
@@ -588,7 +584,6 @@
     margin: 10px;
     font-size: 20px;
   }
-
   .userShow {
     font-size: 32px;
     letter-spacing: 2px;
@@ -716,10 +711,12 @@
   border: 0;
 }
 .kendaraan-show .tombol {
-  display: inline-block;
+  text-align: center;
+  margin: 20px 0px 20px 0px;
 }
 .kendaraan-show .tombol .btn {
-  width: 530px;
+  border-radius: 60px;
+  width: 100%;
   font-size: 32px;
 }
 
@@ -752,7 +749,6 @@
   .kendaraan .info {
     font-size: 20px;
   }
-
   .kendaraan-create .card {
     margin: 0%;
     width: 100%;
@@ -779,7 +775,6 @@
     width: 100%;
     font-size: 20px;
   }
-
   .kendaraan-show .subJudul {
     padding: 20px;
     font-size: 28px;
@@ -816,12 +811,12 @@
     border: 0;
   }
   .kendaraan-show .tombol {
-    display: inline-block;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
   }
   .kendaraan-show .tombol .btn {
-    margin-left: 10px;
-    width: 210px;
-    font-size: 32px;
+    width: 100%;
+    font-size: 20px;
   }
 }
 .problem {
@@ -921,11 +916,11 @@
   padding: 20px;
 }
 .problem-show .card .tombol {
-  display: inline-block;
   text-align: center;
+  margin: 20px 0px 20px 0px;
 }
 .problem-show .card .tombol .btn {
-  width: 380px;
+  width: 100%;
   font-size: 32px;
 }
 
@@ -946,7 +941,6 @@
     font-size: 20px;
     text-align: center;
   }
-
   .problem-create .card {
     margin-left: 4%;
     width: 90%;
@@ -974,7 +968,6 @@
     width: 100%;
     font-size: 20px;
   }
-
   .problem-show {
     margin-left: 0px;
     margin-bottom: 10%;
@@ -987,6 +980,17 @@
   }
   .problem-show .card .image {
     padding: 40px;
+  }
+  .problem-show .card-body {
+    border: 0px;
+  }
+  .problem-show .card-body .tombol {
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+  }
+  .problem-show .card-body .tombol .btn {
+    width: 100%;
+    font-size: 20px;
   }
 }
 .wrapper {

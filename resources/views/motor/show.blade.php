@@ -112,8 +112,14 @@
                 
             </div>
             <div class="tombol">
-                <a class="btn btn-primary" href="{{route('motor.index')}}"> Back</a>
-                <a class="btn btn-warning" href="{{ route('motor.edit',$motor->id) }}">Edit</a>
+                <div class="row">
+                    <div class="col-sm-6 col-6">
+                        <a class="btn btn-primary" href="{{route('motor.index')}}"> Back</a>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <a class="btn btn-warning" href="{{ route('motor.edit',$motor->id) }}">Edit</a>
+                    </div>
+                </div>
             </div>
 
             <br><br><br>

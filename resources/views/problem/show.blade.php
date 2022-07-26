@@ -84,9 +84,16 @@
         <ul class="list-group" id="menu3">
             <li  class="list-group-item">{{ $problem->penanganan}}</li>
         </ul>
+
         <div class="tombol">
-            <a class="btn btn-primary" href="{{route('problem.index')}}"> Back</a>
-            <a class="btn btn-warning" href="{{ route('problem.edit',$problem->id) }}">Edit</a>
+            <div class="row">
+                <div class="col-sm-6 col-6">
+                    <a class="btn btn-primary" href="{{route('problem.index')}}"> Back</a>
+                </div>
+                <div class="col-sm-6 col-6">
+                    <a class="btn btn-warning" href="{{ route('problem.edit',$problem->id) }}">Edit</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

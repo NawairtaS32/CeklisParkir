@@ -6,6 +6,8 @@
     <meta http-equiv="refresh" content="120" />
     {{--  <meta name="keywords" content="">  --}}
     <meta name="author" content="Satriawan Nawairtas">
+    <meta name="keywords" content="nawairtas, parkir,">
+
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

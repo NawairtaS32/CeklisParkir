@@ -86,7 +86,12 @@
                         <a class="ukuran-latop {{request()->is('mobil') ? 'active' : '' }}" href="{{route('mobil.index')}}">Data Mobil</a>
                     </li>
                     <li>
-                        <a class="{{request()->is('mobil/create') ? 'active' : '' }}" href="{{route('mobil.create')}}">Tambah Data Mobil</a>
+                        @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')
+                            <a class="{{request()->is('mobil/create') ? 'active' : '' }}" href="{{route('mobil.create')}}">Tambah Data Mobil</a>
+                        @elseif (Auth::check() && Auth::user()->jabatan == 'Staff Petugas Lapangan')
+                            <a class="{{request()->is('mobil/create') ? 'active' : '' }}" href="{{route('mobil.create')}}">Tambah Data Mobil</a>
+                        @else (Auth::check() && Auth::user()->jabatan == 'Central Park Manager')
+                        @endif
                     </li>
                 </ul>
             </li>
@@ -111,7 +116,12 @@
                         <a class="ukuran-latop {{request()->is('motor') ? 'active' : '' }}" href="{{route('motor.index')}}">Data Motor</a>
                     </li>
                     <li>
-                        <a class="{{request()->is('motor/create') ? 'active' : '' }}" href="{{route('motor.create')}}">Tambah Data Motor</a>
+                        @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')
+                            <a class="{{request()->is('motor/create') ? 'active' : '' }}" href="{{route('motor.create')}}">Tambah Data Motor</a>
+                        @elseif (Auth::check() && Auth::user()->jabatan == 'Staff Petugas Lapangan')
+                            <a class="{{request()->is('motor/create') ? 'active' : '' }}" href="{{route('motor.create')}}">Tambah Data Motor</a>
+                        @else (Auth::check() && Auth::user()->jabatan == 'Central Park Manager')
+                        @endif
                     </li>
                 </ul>
             </li>
