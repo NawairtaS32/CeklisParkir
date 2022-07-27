@@ -93,7 +93,7 @@
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">        
                             <label for="kondisi">Kondisi Kendaraan  </label>
-                            <input type="file" class="form-control" name="kondisi" id="kondisi" rows="3" value="{{ old('kondisi') }}"></input>
+                            <input type="text" class="form-control" name="kondisi" id="kondisi" rows="3" value="{{ old('kondisi') }}"></input>
                             @foreach ( $errors->get('kondisi') as $msg)
                             <p class="text-danger">Ambilah gambar sesuai dengan prosedur </p>                       
                             @endforeach
@@ -102,7 +102,7 @@
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">        
                             <label for="status">Status Kendaraan</label>
-                            <input type="file" class="form-control" placeholder="" name="status" id="status" value="{{ old('status') }}"></input>
+                            <input type="text" class="form-control" placeholder="" name="status" id="status" value="{{ old('status') }}"></input>
                             @foreach ( $errors->get('status') as $msg)
                                 <p class="text-danger">Isilah sesuai dengan prosedur </p>                
                             @endforeach

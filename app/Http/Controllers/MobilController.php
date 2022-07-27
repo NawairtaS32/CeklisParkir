@@ -6,6 +6,7 @@ use App\Models\Mobil;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use PhpParser\Node\Stmt\If_;
 
 class MobilController extends Controller
 {
@@ -29,12 +30,13 @@ class MobilController extends Controller
         $jumlah_mobil = Mobil::count();
         $cari = $request->cari;
         $data_mobil = Mobil::latest()->paginate(50);
+        
 
         if (request('cari')) {
             $data_mobil   = Mobil::where('nopol', 'like', "%".$request->cari."%")
             ->orWhere('type', 'like', "%".$request->cari."%")
             ->orWhere('status', 'like', "%".$request->cari."%")
-            ->paginate(10);
+            ->paginate(50);
         }
         return view('mobil.index', compact('data_mobil','jumlah_mobil','cari'));
     }
@@ -226,13 +228,17 @@ class MobilController extends Controller
         return $pdf->stream();
     }
 
-    public function mobil_print()
+    public function mobil_print(Request $request)
     {
         $jumlah_mobil = Mobil::count();
-        $data_mobil = Mobil::latest()->paginate(50);
+        $tanggal_awal =  $request->tanggal_awal . ' 00:00:00';
+        $tanggal_akhir = $request->tanggal_akhir . ' 23:59:59';
+
+        $data_mobil = Mobil::whereBetween('waktu',[$tanggal_awal, $tanggal_akhir])->latest()->get();
+
         $pdf =PDF::loadview('mobil.mobil_print', compact('data_mobil', 'jumlah_mobil'))
         ->setOptions(['defaultFont' => 'sans-serif'])
         ->setPaper('a4', 'landscape');
-        return $pdf->stream();
+        return $pdf->download('Data Kendaraan Mobil.pdf');
     }
 }

@@ -613,13 +613,42 @@
   }
 }
 .kendaraan {
-  margin-bottom: 140px;
+  width: 100%;
+  height: 200px;
 }
 .kendaraan .subJudul {
   padding: 20px;
   font-size: 60px;
   text-align: center;
   text-transform: capitalize;
+}
+.kendaraan .search {
+  margin: 40px;
+}
+.kendaraan .search .form-control {
+  background: whitesmoke;
+  color: black;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid blue;
+  border-radius: 32px 0px 0px 32px;
+}
+.kendaraan .kendaraan_modal {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 50px;
+}
+.kendaraan .kendaraan_modal .modal-title {
+  text-align: center;
+  font-size: 32px;
+}
+.kendaraan .kendaraan_modal .modal-body {
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+.kendaraan .kendaraan_modal .modal-body .form-group {
+  margin: 10px;
 }
 .kendaraan .menu {
   margin-bottom: 32px;
@@ -721,9 +750,6 @@
 }
 
 @media screen and (max-width: 720px) {
-  .kendaraan {
-    margin-bottom: 140px;
-  }
   .kendaraan .subJudul {
     padding: 10px 0px 20px 0px;
     font-size: 32px;
@@ -827,6 +853,34 @@
   font-size: 60px;
   text-align: center;
   text-transform: capitalize;
+}
+.problem .search {
+  margin: 40px;
+}
+.problem .search .form-control {
+  background: whitesmoke;
+  color: black;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid blue;
+  border-radius: 32px 0px 0px 32px;
+}
+.problem .problem_modal {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 50px;
+}
+.problem .problem_modal .modal-title {
+  text-align: center;
+  font-size: 32px;
+}
+.problem .problem_modal .modal-body {
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+.problem .problem_modal .modal-body .form-group {
+  margin: 10px;
 }
 .problem .menu {
   margin-bottom: 32px;
@@ -995,7 +1049,6 @@
 }
 .wrapper {
   width: 100%;
-  height: 200px;
   padding: 0;
   margin: 0;
   font-family: "Times New Roman", Times, serif;
@@ -1004,13 +1057,12 @@
   margin-top: 200px;
 }
 .wrapper .wrapper-content {
-  margin-top: 210px;
+  margin: 220px 0px 0px 10px;
 }
 
 @media screen and (max-width: 720px) {
   .wrapper {
     width: 100%;
-    height: 200px;
     font-family: "Times New Roman", Times, serif;
   }
   .wrapper .wrapper-header {

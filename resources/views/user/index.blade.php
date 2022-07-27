@@ -104,9 +104,6 @@
         <a class="btn btn-secondary" href="{{ route('user.index') }}">kembali</a>
     </div>
 @endif
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
 @endsection
 
 @push('page-scripts')

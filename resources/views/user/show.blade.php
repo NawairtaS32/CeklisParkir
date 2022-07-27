@@ -26,7 +26,7 @@
       </ul>
       <div class="card-body">
         <div class="tombol">
-          <a href="/user" class="btn btn-warning">BACK</a>
+          <a href="{{route('user.index')}}" class="btn btn-warning">BACK</a>
         </div>
       </div>
     </div>

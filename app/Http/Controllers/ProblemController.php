@@ -219,4 +219,18 @@ class ProblemController extends Controller
         // return $pdf->download('problem.print');
         return $pdf->stream();
     }
+
+    public function problem_print(Request $request)
+    {
+        $jumlah_problem = Problem::count();
+        $tanggal_awal =  $request->tanggal_awal . ' 00:00:00';
+        $tanggal_akhir = $request->tanggal_akhir . ' 23:59:59';
+
+        $data_problem = Problem::whereBetween('waktu',[$tanggal_awal, $tanggal_akhir])->latest()->get();
+
+        $pdf =PDF::loadview('problem.problem_print', compact('data_problem', 'jumlah_problem'))
+        ->setOptions(['defaultFont' => 'sans-serif'])
+        ->setPaper('a4', 'landscape');
+        return $pdf->download('Data Kejadian/Masalah.pdf');
+    }
 }

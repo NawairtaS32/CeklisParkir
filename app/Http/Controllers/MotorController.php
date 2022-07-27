@@ -220,13 +220,17 @@ class MotorController extends Controller
         return $pdf->stream();
     }
 
-    public function motor_print()
+    public function motor_print(Request $request)
     {
-        $data_motor = Motor::latest()->paginate(10);
         $jumlah_motor = Motor::count();
+        $tanggal_awal =  $request->tanggal_awal . ' 00:00:00';
+        $tanggal_akhir = $request->tanggal_akhir . ' 23:59:59';
+
+        $data_motor = motor::whereBetween('waktu',[$tanggal_awal, $tanggal_akhir])->latest()->get();
+
         $pdf =PDF::loadview('motor.motor_print', compact('data_motor', 'jumlah_motor'))
         ->setOptions(['defaultFont' => 'sans-serif'])
         ->setPaper('a4', 'landscape');
-        return $pdf->stream();
+        return $pdf->download('Data Kendaraan motor.pdf');
     }
 }
