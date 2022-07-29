@@ -74,11 +74,11 @@
                         <div class="form-group">
                             <label for="ban">Kondisi Ban</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="ban" value="baik">
+                                <input class="form-check-input" type="radio" name="ban" value="baik" checked>
                                 <label class="form-check-label" for="ban">Baik</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="ban" value="kurang angin">
+                                <input class="form-check-input" type="radio" name="ban" value="kurang angin" >
                                 <label class="form-check-label" for="ban">Kurang angin</label>
                             </div>
                             <div class="form-check">
@@ -91,7 +91,7 @@
                         <div class="form-group">
                             <label for="spion">Kondisi Spion</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="spion" value="baik" >
+                                <input class="form-check-input" type="radio" name="spion" value="baik" checked>
                                 <label class="form-check-label" for="spion">Baik</label>
                             </div>
                             <div class="form-check">

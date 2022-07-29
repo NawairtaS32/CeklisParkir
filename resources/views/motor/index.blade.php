@@ -18,63 +18,80 @@
 
         <div class="subJudul">Data Kendaraan Motor</div>
 
-        <div class="search">
-            <form action="{{route('motor.index')}}" method="GET">
-                @csrf
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Cari Data Kendaraan Motor" name="cari" id="cari">
-                    <button class="btn btn-outline-primary" id="cari" type="submit">
-                        <i class="fa-solid fa-magnifying-glass fa-2x"></i>
-                    </button>
-                </div>
-            </form>
-        </div>
-
-        <div class="row justify-content-md-center menu">
-            <div class="col-sm-8 col-4">
+        <div class="subMenu">
+            <div class="btn-group" role="group" aria-label="Basic example">
                 @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')
-                    <a class="btn btn-primary" href="{{route('motor.create')}}" role="button">Tambah Data </a>
+                    <a class="btn btn-success tambah" href="{{route('motor.create')}}" role="button">
+                        Tambah
+                    </a>
                 @elseif (Auth::check() && Auth::user()->jabatan == 'Staff Petugas Lapangan')
-                    <a class="btn btn-primary" href="{{route('motor.create')}}" role="button">Tambah Data </a>                        
+                    <a class="btn btn-success tambah" href="{{route('motor.create')}}" role="button">
+                        Tambah
+                    </a>
                 @else (Auth::check() && Auth::user()->jabatan == 'Central Park Manager')
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cetakMotor">
-                        Cetak Data
-                    </button>
-                
-                <!-- Modal -->
-                    <div class="modal fade" id="cetakMotor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content kendaraan_modal">
-                                <div class="modal-header">
-                                    <span class="modal-title" id="exampleModalLongTitle">Cetak Data Mobil</span>
-                                </div>
-                                <div class="modal-body">
-                                    <form method="GET" action="{{route('motor.motor_print')}}" enctype="multipart/form-data">
-                                        <div class="form-group">
-                                            <input type="date" class="form-control" placeholder="" name="tanggal_awal" id="tanggal_awal" value="{{ date('Y-m-d') }}">
-                                        </div>
-                                        <div class="form-group">
-                                            s/d
-                                        </div>  
-                                        <div class="form-group">
-                                            <input type="date" class="form-control" placeholder="" name="tanggal_akhir" id="tanggal_akhir" value="{{ date('Y-m-d') }}">
-                                        </div>
-                                            <button type="submit" class="btn btn-primary">
-                                                <i class="fa-solid fa-print"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                                     
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#cetakmotor">
+                        Cetak
+                    </button> 
                 @endif
-            </div>
-
-            <div class="col-sm-4 col-8">
-                
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#filtermotor">
+                    Pencarian
+                </button>
             </div>
         </div>
+
+        <!-- Modal cetak data-->
+        <div class="modal fade" id="cetakmotor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="modal-title" id="exampleModalLongTitle">Cetak Data motor</span>
+                    </div>
+                    <div class="modal-body">
+                        <form method="GET" action="{{route('motor.motor_print')}}" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="date" class="form-control" placeholder="" name="tanggal_awal" id="tanggal_awal" value="{{ date('Y-m-d') }}">
+                            </div>
+                            <div class="form-group">
+                                s/d
+                            </div>  
+                            <div class="form-group">
+                                <input type="date" class="form-control" placeholder="" name="tanggal_akhir" id="tanggal_akhir" value="{{ date('Y-m-d') }}">
+                            </div>
+                            <div class="tombol">
+                                <button type="submit" class="btn btn-primary">
+                                    Cetak
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>                                     
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <!-- Modal fliter data -->
+        <div class="modal fade" id="filtermotor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content motor_cetak">
+                    <div class="modal-header">
+                        <span class="modal-title" id="exampleModalLongTitle">Pencarian Data motor</span>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{route('motor.index')}}" method="GET" class="d-flex">
+                            @csrf
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Cari nopol/type/status pada data kendaraan motor" name="cari" id="cari">
+                                <button class="btn btn-outline-primary" id="cari" type="submit">
+                                    <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+                                </button>
+                            </div>  
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        
         
         <div class="table-responsive-sm">
             <table class="table table-striped">
@@ -87,7 +104,7 @@
                         <th>Petugas</th>
                         <th>Area</th>
                         <th>lokasi</th>
-                        <th>Status Kendaran</th>
+                        <th>Status</th>
                         <th>aksi</th>
                     </tr>
                 </thead>
@@ -145,16 +162,14 @@
             </table>
         </div>
 
-        <div class="row justify-content-md-center pagination p-2">
-            @if($data_motor->hasPages())
-            <div class="card-footer">
-                    jumlah motor :  {{$jumlah_motor}}
-                    {{ $data_motor->links() }}
-                </div>
-            @endif
+        {{-- perhatikan script di bawah ini untuk membuat paginasi dan yang berkaitan dengan paginasi  --}}
+        <div class="info">
+            Jumlah Data: {{ $data_motor->total() }}<br>
+            Halaman : {{ $data_motor->currentPage() }}<br>
+            Data perhalaman: {{ $data_motor->perPage() }}<br>
+            <br>
+            {{ $data_motor->links() }}
         </div>
-        <br><br>
-        <br><br>
     </div>
 @else
     <div class="container alert alert-warning">

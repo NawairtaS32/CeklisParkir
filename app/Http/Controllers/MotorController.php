@@ -28,7 +28,7 @@ class MotorController extends Controller
     {
         $jumlah_motor = Motor::count();
         $cari = $request->cari;
-        $data_motor = Motor::latest()->paginate(10);
+        $data_motor = Motor::latest()->paginate(20);
 
         if (request('cari')) {
             $data_motor   = Motor::where('nopol', 'like', "%".$request->cari."%")

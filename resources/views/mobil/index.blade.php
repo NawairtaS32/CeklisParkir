@@ -20,95 +20,81 @@
             <div class="subJudul">
                 <span>Data Kendaraan Mobil</span>
             </div>
-            <div class="search">
-                <form action="{{route('mobil.index')}}" method="GET" class="d-flex">
-                    @csrf
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Cari nopol/type/status pada data kendaraan mobil" name="cari" id="cari">
-                        <button class="btn btn-outline-primary" id="cari" type="submit">
-                            <i class="fa-solid fa-magnifying-glass fa-2x"></i>
-                        </button>
-                    </div>  
-                </form>
-            </div>
 
-            <div class="row justify-content-md-center menu">
-                <div class="col-sm-6 col-6">
+            <div class="subMenu">
+                <div class="btn-group" role="group" aria-label="Basic example">
                     @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')
-                        <a class="btn btn-success tambah" href="{{route('mobil.create')}}" role="button">Tambah Data</a>
+                        <a class="btn btn-success tambah" href="{{route('mobil.create')}}" role="button">
+                            Tambah
+                        </a>
                     @elseif (Auth::check() && Auth::user()->jabatan == 'Staff Petugas Lapangan')
-                        <a class="btn btn-success tambah" href="{{route('mobil.create')}}" role="button">Tambah Data</a>
+                        <a class="btn btn-success tambah" href="{{route('mobil.create')}}" role="button">
+                            Tambah
+                        </a>
                     @else (Auth::check() && Auth::user()->jabatan == 'Central Park Manager')
-
-                    <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cetakMobil">
-                            Cetak Data
-                        </button>
-                    
-                    <!-- Modal -->
-                        <div class="modal fade" id="cetakMobil" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content kendaraan_modal">
-                                    <div class="modal-header">
-                                        <span class="modal-title" id="exampleModalLongTitle">Cetak Data Mobil</span>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form method="GET" action="{{route('mobil.mobil_print')}}" enctype="multipart/form-data">
-                                            <div class="form-group">
-                                                <input type="date" class="form-control" placeholder="" name="tanggal_awal" id="tanggal_awal" value="{{ date('Y-m-d') }}">
-                                            </div>
-                                            <div class="form-group">
-                                                s/d
-                                            </div>  
-                                            <div class="form-group">
-                                                <input type="date" class="form-control" placeholder="" name="tanggal_akhir" id="tanggal_akhir" value="{{ date('Y-m-d') }}">
-                                            </div>
-                                                <button type="submit" class="btn btn-primary">
-                                                    <i class="fa-solid fa-print"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                                     
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#cetakMobil">
+                            Cetak
+                        </button> 
                     @endif
-                </div>
-                
-                <div class="col-sm-6 col-6">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#filterMobil">
-                            filter Data
-                        </button>
-                    
-                    <!-- Modal -->
-                        <div class="modal fade" id="filterMobil" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content mobil_cetak">
-                                    <div class="modal-header">
-                                        <span class="modal-title" id="exampleModalLongTitle">Filter Data Mobil</span>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form method="GET" action="{{route('mobil.mobil_print')}}" enctype="multipart/form-data">
-                                            <div class="form-group">
-                                                <input type="date" class="form-control" placeholder="" name="tanggal_awal" id="tanggal_awal" value="{{ date('Y-m-d') }}">
-                                            </div>
-                                            <div class="form-group">
-                                                s/d
-                                            </div>  
-                                            <div class="form-group">
-                                                <input type="date" class="form-control" placeholder="" name="tanggal_akhir" id="tanggal_akhir" value="{{ date('Y-m-d') }}">
-                                            </div>
-                                                <button type="submit" class="btn btn-primary">
-                                                    <i class="fa-solid fa-print"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                                     
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#filterMobil">
+                        Pencarian
+                    </button>
                 </div>
             </div>
+
+            <!-- Modal cetak data-->
+            <div class="modal fade" id="cetakMobil" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="modal-title" id="exampleModalLongTitle">Cetak Data Mobil</span>
+                        </div>
+                        <div class="modal-body">
+                            <form method="GET" action="{{route('mobil.mobil_print')}}" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <input type="date" class="form-control" placeholder="" name="tanggal_awal" id="tanggal_awal" value="{{ date('Y-m-d') }}">
+                                </div>
+                                <div class="form-group">
+                                    s/d
+                                </div>  
+                                <div class="form-group">
+                                    <input type="date" class="form-control" placeholder="" name="tanggal_akhir" id="tanggal_akhir" value="{{ date('Y-m-d') }}">
+                                </div>
+                                <div class="tombol">
+                                    <button type="submit" class="btn btn-primary">
+                                        Cetak
+                                    </button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>                                     
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+            <!-- Modal fliter data -->
+            <div class="modal fade" id="filterMobil" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content mobil_cetak">
+                        <div class="modal-header">
+                            <span class="modal-title" id="exampleModalLongTitle">Pencarian Data Mobil</span>
+                        </div>
+                        <div class="modal-body">
+                            <form action="{{route('mobil.index')}}" method="GET" class="d-flex">
+                                @csrf
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Cari nopol/type/status pada data kendaraan mobil" name="cari" id="cari">
+                                    <button class="btn btn-outline-primary" id="cari" type="submit">
+                                        <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+                                    </button>
+                                </div>  
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            
+
             <div class="table-responsive-sm">
                 <table class="table table-striped table-sm">
                     <thead class="thead-dark mr-2">
@@ -120,7 +106,7 @@
                             <th>Petugas</th>
                             <th>Area</th>
                             <th>lokasi</th>
-                            <th>Status Kendaraan</th>
+                            <th>Status</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -173,15 +159,13 @@
                     </tbody>
                 </table>
             </div>
-
-            <div class="row justify-content-md-center pagination p-2 info">
-                
-                @if($data_mobil->hasPages())
-                <div class="card-footer">
-                        jumlah mobil :  {{$jumlah_mobil}}
-                        {{ $data_mobil->links() }}
-                    </div>
-                @endif
+            
+            <div class="info">
+                Jumlah Data: {{ $data_mobil->total() }}<br>
+                Halaman : {{ $data_mobil->currentPage() }}<br>
+                Data perhalaman: {{ $data_mobil->perPage() }}<br>
+                <br>
+                {{ $data_mobil->links() }}
             </div>
         </div>
         

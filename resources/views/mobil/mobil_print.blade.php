@@ -136,9 +136,6 @@
                 @endforeach
             </table>
             <br>
-            <div class="jumlah">
-                jumlah mobil :  {{$jumlah_mobil}}
-            </div>
         </div>
         <br><br>
 

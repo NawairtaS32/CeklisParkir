@@ -27,18 +27,16 @@ class MobilController extends Controller
      */
     public function index(Request $request)
     {
-        $jumlah_mobil = Mobil::count();
-        $cari = $request->cari;
-        $data_mobil = Mobil::latest()->paginate(50);
-        
+        $cari = $request->cari;     
+        $data_mobil = Mobil::latest()->paginate(20);
 
         if (request('cari')) {
             $data_mobil   = Mobil::where('nopol', 'like', "%".$request->cari."%")
             ->orWhere('type', 'like', "%".$request->cari."%")
             ->orWhere('status', 'like', "%".$request->cari."%")
-            ->paginate(50);
+            ->paginate(20);
         }
-        return view('mobil.index', compact('data_mobil','jumlah_mobil','cari'));
+        return view('mobil.index', compact('data_mobil','cari'));
     }
 
     /**

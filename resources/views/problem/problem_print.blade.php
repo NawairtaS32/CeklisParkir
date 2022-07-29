@@ -119,9 +119,6 @@
                     @endforeach
             </table>
             <br>
-            <div class="jumlah">
-                jumlah problem :  {{$jumlah_problem}}
-            </div>
         </div>
         <br><br>
 

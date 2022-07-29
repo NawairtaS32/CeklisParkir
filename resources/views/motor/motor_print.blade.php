@@ -135,10 +135,6 @@
                 @endforeach
             </table>
             <br>
-            <div class="jumlah">
-                jumlah motor :  {{$jumlah_motor}}
-            </div>
-        </div>
         <br><br>
 
         <footer>

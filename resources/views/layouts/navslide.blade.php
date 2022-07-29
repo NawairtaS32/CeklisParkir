@@ -83,7 +83,7 @@
                         </form>
                     </li>
                     <li>
-                        <a class="ukuran-latop {{request()->is('mobil') ? 'active' : '' }}" href="{{route('mobil.index')}}">Data Mobil</a>
+                        <a class=" {{request()->is('mobil') ? 'active' : '' }}" href="{{route('mobil.index')}}">Data Mobil</a>
                     </li>
                     <li>
                         @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')
@@ -113,7 +113,7 @@
                         </form>
                     </li>
                     <li>
-                        <a class="ukuran-latop {{request()->is('motor') ? 'active' : '' }}" href="{{route('motor.index')}}">Data Motor</a>
+                        <a class=" {{request()->is('motor') ? 'active' : '' }}" href="{{route('motor.index')}}">Data Motor</a>
                     </li>
                     <li>
                         @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')

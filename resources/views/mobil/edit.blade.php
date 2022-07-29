@@ -63,7 +63,6 @@
                             <label>Kondisi Bagian Belakang :</label><br>
                             <input type="file" id="gb_belakang"  name="gb_belakang" value="{{ old('gb_belakang') }}">
                             <img class="image" src="{{ asset ('imgMbl/' . $mobil->gb_belakang) }}" alt="" >
-
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
@@ -80,7 +79,7 @@
                         <div class="form-group">
                             <label for="ban">Kondisi Ban</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="ban" value="baik">
+                                <input class="form-check-input" type="radio" name="ban" value="baik" checked>
                                 <label class="form-check-label" for="ban">Baik</label>
                             </div>
                             <div class="form-check">
@@ -97,7 +96,7 @@
                         <div class="form-group">
                             <label for="spion">Kondisi Spion</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="spion" value="baik" >
+                                <input class="form-check-input" type="radio" name="spion" value="baik" checked>
                                 <label class="form-check-label" for="spion">Baik</label>
                             </div>
                             <div class="form-check">
@@ -108,6 +107,9 @@
                                 <input class="form-check-input" type="radio" name="spion" value="baret atau penyok">
                                 <label class="form-check-label" for="spion">baret atau penyok</label>
                             </div>
+                            @foreach ( $errors->get('spion') as $msg)
+                                <p class="text-danger">Isilah data sesuai dengan kondisi kendaraan </p>      
+                            @endforeach
                         </div>
                     </div>
                 </div> 

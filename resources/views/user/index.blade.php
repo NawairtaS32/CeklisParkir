@@ -17,28 +17,82 @@
             </div>
         @endif 
 
-        <span class="subJudul">Data Petugas Parkir</span>   
+        <div class="subJudul">
+            Data Petugas Parkir
+        </div>   
 
-        <div class="row justify-content-md-center menu">
-            
-            <div class="col-sm-8 col-4">
+        <div class="subMenu">
+            <div class="btn-group" role="group" aria-label="Basic example">
                 @if (Auth::check() && Auth::user()->jabatan == 'Pengawas Petugas Parkir')
-                    <a class="btn btn-primary" href="{{route('user.create')}}" role="button">Tambah Data</a>
+                    <a class="btn btn-success tambah" href="{{route('user.create')}}" role="button">
+                        Tambah
+                    </a>
+                @elseif (Auth::check() && Auth::user()->jabatan == 'Staff Petugas Lapangan')
+                    <a class="btn btn-success tambah" href="{{route('user.create')}}" role="button">
+                        Tambah
+                    </a>
                 @else (Auth::check() && Auth::user()->jabatan == 'Central Park Manager')
-                    <a class="btn btn-success" href="{{route('user.user_print')}}" role="button">Cetak Data</a>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#cetakuser">
+                        Cetak
+                    </button> 
                 @endif
-            </div>
-
-            <div class="col-sm-4 col-8">
-                <form action="{{route('user.index')}}" method="GET" class="d-flex">
-                    @csrf
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Cari Data Petugas" name="cari" id="cari">
-                        <button class="btn btn-outline-secondary" id="cari" type="submit">Search</button>
-                    </div>
-                </form>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#filteruser">
+                    Pencarian
+                </button>
             </div>
         </div>
+
+        <!-- Modal cetak data-->
+        <div class="modal fade" id="cetakuser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="modal-title" id="exampleModalLongTitle">Cetak Data user</span>
+                    </div>
+                    <div class="modal-body">
+                        <form method="GET" action="{{route('user.user_print')}}" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="date" class="form-control" placeholder="" name="tanggal_awal" id="tanggal_awal" value="{{ date('Y-m-d') }}">
+                            </div>
+                            <div class="form-group">
+                                s/d
+                            </div>  
+                            <div class="form-group">
+                                <input type="date" class="form-control" placeholder="" name="tanggal_akhir" id="tanggal_akhir" value="{{ date('Y-m-d') }}">
+                            </div>
+                            <div class="tombol">
+                                <button type="submit" class="btn btn-primary">
+                                    Cetak
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>                                     
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <!-- Modal fliter data -->
+        <div class="modal fade" id="filteruser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content user_cetak">
+                    <div class="modal-header">
+                        <span class="modal-title" id="exampleModalLongTitle">Pencarian Data user</span>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{route('user.index')}}" method="GET" class="d-flex">
+                            @csrf
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Cari nama/nik pada data user" name="cari" id="cari">
+                                <button class="btn btn-outline-primary" id="cari" type="submit">
+                                    <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+                                </button>
+                            </div>  
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
 
         <div class="table-responsive-sm">
             <table class="table table-striped ">
@@ -87,13 +141,12 @@
             </table>
         </dir>
 
-        <div class="row justify-content-md-center pagination p-2">
-            @if($data_user->hasPages())
-            <div class="card-footer">
-                    jumlah user :  {{$jumlah_user}}
-                    {{ $data_user->links() }}
-                </div>
-            @endif
+        <div class="info">
+            Jumlah Data: {{ $data_user->total() }}<br>
+            Halaman : {{ $data_user->currentPage() }}<br>
+            Data perhalaman: {{ $data_user->perPage() }}<br>
+            <br>
+            {{ $data_user->links() }}
         </div>
     </div>
 @else
