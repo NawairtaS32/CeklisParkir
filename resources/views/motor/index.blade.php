@@ -42,7 +42,7 @@
         <!-- Modal cetak data-->
         <div class="modal fade" id="cetakmotor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
+                <div class="modal-table modal-content">
                     <div class="modal-header">
                         <span class="modal-title" id="exampleModalLongTitle">Cetak Data motor</span>
                     </div>
@@ -72,7 +72,7 @@
         <!-- Modal fliter data -->
         <div class="modal fade" id="filtermotor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content motor_cetak">
+                <div class="modal-table modal-content motor_cetak">
                     <div class="modal-header">
                         <span class="modal-title" id="exampleModalLongTitle">Pencarian Data motor</span>
                     </div>
@@ -162,13 +162,16 @@
             </table>
         </div>
 
-        {{-- perhatikan script di bawah ini untuk membuat paginasi dan yang berkaitan dengan paginasi  --}}
+        <br><br>
+
         <div class="info">
             Jumlah Data: {{ $data_motor->total() }}<br>
             Halaman : {{ $data_motor->currentPage() }}<br>
             Data perhalaman: {{ $data_motor->perPage() }}<br>
             <br>
             {{ $data_motor->links() }}
+
+            <br><br>
         </div>
     </div>
 @else

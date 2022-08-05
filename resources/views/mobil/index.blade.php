@@ -75,7 +75,7 @@
             <!-- Modal fliter data -->
             <div class="modal fade" id="filterMobil" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content mobil_cetak">
+                    <div class="modal-table modal-content mobil_cetak">
                         <div class="modal-header">
                             <span class="modal-title" id="exampleModalLongTitle">Pencarian Data Mobil</span>
                         </div>
@@ -159,13 +159,14 @@
                     </tbody>
                 </table>
             </div>
-            
+            <br><br>
             <div class="info">
                 Jumlah Data: {{ $data_mobil->total() }}<br>
                 Halaman : {{ $data_mobil->currentPage() }}<br>
                 Data perhalaman: {{ $data_mobil->perPage() }}<br>
                 <br>
                 {{ $data_mobil->links() }}
+                <br><br>
             </div>
         </div>
         

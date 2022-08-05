@@ -26,9 +26,8 @@ class ProblemController extends Controller
      */
     public function index(Request $request)
     {
-        $jumlah_problem = Problem::count();
         $cari = $request->cari;
-        $data_problem  = Problem::latest()->paginate(10);
+        $data_problem  = Problem::orderBy('updated_at', 'desc')->paginate(20);
 
         if (request('cari')) {
             $data_problem   = Problem::where('name', 'like', "%".$request->cari."%")
@@ -38,7 +37,7 @@ class ProblemController extends Controller
             ->paginate(10);
         }
         // dd($data_problem);
-        return view('problem.index', compact('data_problem','jumlah_problem','cari'));
+        return view('problem.index', compact('data_problem','cari'));
     }
 
     /**
@@ -158,7 +157,7 @@ class ProblemController extends Controller
             $problem->jk                = $request->jk;
             $problem->alamat            = $request->alamat;
             $problem->tlp               = $request->tlp;
-            $problem->nolpol            = $request->nopol;
+            $problem->nopol            = $request->nopol;
             $problem->status            = $request->status;
             $problem->no_stnk           = $request->no_stnk;
             $problem->j_kendaraan       = $request->j_kendaraan;
@@ -168,8 +167,8 @@ class ProblemController extends Controller
 
             $image_customer                = $request  ->file('gb_customer');
             $new_image_customer            = rand().'.'.$image_customer ->getClientOriginalExtension();
-            $problem         ->gb_customer = $new_image_customer;
-            $image_customer     ->  move(public_path('imgProblem'), $new_image_customer); 
+            $problem->gb_customer          = $new_image_customer;
+            $image_customer                 ->  move(public_path('imgProblem'), $new_image_customer); 
 
         } else {
             $problem->waktu             = now();

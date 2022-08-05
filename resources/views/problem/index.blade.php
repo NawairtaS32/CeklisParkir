@@ -45,7 +45,7 @@
         <!-- Modal cetak data-->
         <div class="modal fade" id="cetakproblem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
+                <div class=" modal-table modal-content">
                     <div class="modal-header">
                         <span class="modal-title" id="exampleModalLongTitle">Cetak Data problem</span>
                     </div>
@@ -75,7 +75,7 @@
         <!-- Modal fliter data -->
         <div class="modal fade" id="filterproblem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
+                <div class=" modal-table modal-content">
                     <div class="modal-header">
                         <span class="modal-title" id="exampleModalLongTitle">Pencarian Data problem</span>
                     </div>
@@ -142,12 +142,15 @@
             </table>
         </div>
 
+        <br><br>
         <div class="info">
             Jumlah Data: {{ $data_problem->total() }}<br>
             Halaman : {{ $data_problem->currentPage() }}<br>
             Data perhalaman: {{ $data_problem->perPage() }}<br>
             <br>
             {{ $data_problem->links() }}
+
+            <br><br>
         </div>
     </div>
 @else

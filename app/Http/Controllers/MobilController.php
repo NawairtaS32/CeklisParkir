@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use PhpParser\Node\Stmt\If_;
 
+
 class MobilController extends Controller
 {
     /**
@@ -28,7 +29,7 @@ class MobilController extends Controller
     public function index(Request $request)
     {
         $cari = $request->cari;     
-        $data_mobil = Mobil::latest()->paginate(20);
+        $data_mobil = Mobil::orderBy('updated_at', 'desc')->paginate(20);
 
         if (request('cari')) {
             $data_mobil   = Mobil::where('nopol', 'like', "%".$request->cari."%")

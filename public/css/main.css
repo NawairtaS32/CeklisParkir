@@ -452,35 +452,35 @@
   border-radius: 20px;
   font-size: 20px;
 }
-.user .modal-content {
+.user .modal-table {
   width: 100%;
   border: 2px solid black;
   border-radius: 50px;
 }
-.user .modal-content .modal-header {
+.user .modal-table .modal-header {
   font-size: 32px;
 }
-.user .modal-content .modal-body .form-group {
+.user .modal-table .modal-body .form-group {
   text-align: center;
   letter-spacing: 20px;
   font-size: 20px;
 }
-.user .modal-content .modal-body .form-group .form-control {
+.user .modal-table .modal-body .form-group .form-control {
   text-align: center;
   font-size: 20px;
   letter-spacing: 6px;
 }
-.user .modal-content .modal-body .tombol {
+.user .modal-table .modal-body .tombol {
   margin-top: 20px;
   width: 100%;
   text-align: end;
 }
-.user .modal-content .modal-body .tombol .btn {
+.user .modal-table .modal-body .tombol .btn {
   border-radius: 50px;
   display: inline-block;
   font-size: 20px;
 }
-.user .modal-content .modal-body .input-group {
+.user .modal-table .modal-body .input-group {
   padding: 20px;
 }
 .user .menu {
@@ -652,36 +652,36 @@
   border-radius: 20px;
   font-size: 20px;
 }
-.kendaraan .modal-content {
+.kendaraan .modal-table {
   margin: 40px;
   width: 100%;
   border: 2px solid black;
   border-radius: 50px;
 }
-.kendaraan .modal-content .modal-header {
+.kendaraan .modal-table .modal-header {
   font-size: 32px;
 }
-.kendaraan .modal-content .modal-body .form-group {
+.kendaraan .modal-table .modal-body .form-group {
   text-align: center;
   letter-spacing: 20px;
   font-size: 20px;
 }
-.kendaraan .modal-content .modal-body .form-group .form-control {
+.kendaraan .modal-table .modal-body .form-group .form-control {
   text-align: center;
   font-size: 20px;
   letter-spacing: 6px;
 }
-.kendaraan .modal-content .modal-body .tombol {
+.kendaraan .modal-table .modal-body .tombol {
   margin-top: 20px;
   width: 100%;
   text-align: end;
 }
-.kendaraan .modal-content .modal-body .tombol .btn {
+.kendaraan .modal-table .modal-body .tombol .btn {
   border-radius: 50px;
   display: inline-block;
   font-size: 20px;
 }
-.kendaraan .modal-content .modal-body .input-group {
+.kendaraan .modal-table .modal-body .input-group {
   padding: 20px;
 }
 .kendaraan .menu {
@@ -905,35 +905,35 @@
 .problem .subMenu .btn-group .btn {
   font-size: 20px;
 }
-.problem .modal-content {
+.problem .modal-table {
   width: 100%;
   border: 2px solid black;
   border-radius: 50px;
 }
-.problem .modal-content .modal-header {
+.problem .modal-table .modal-header {
   font-size: 32px;
 }
-.problem .modal-content .modal-body .form-group {
+.problem .modal-table .modal-body .form-group {
   text-align: center;
   letter-spacing: 20px;
   font-size: 20px;
 }
-.problem .modal-content .modal-body .form-group .form-control {
+.problem .modal-table .modal-body .form-group .form-control {
   text-align: center;
   font-size: 20px;
   letter-spacing: 6px;
 }
-.problem .modal-content .modal-body .tombol {
+.problem .modal-table .modal-body .tombol {
   margin-top: 20px;
   width: 100%;
   text-align: end;
 }
-.problem .modal-content .modal-body .tombol .btn {
+.problem .modal-table .modal-body .tombol .btn {
   border-radius: 50px;
   display: inline-block;
   font-size: 20px;
 }
-.problem .modal-content .modal-body .input-group {
+.problem .modal-table .modal-body .input-group {
   padding: 20px;
 }
 .problem .menu {

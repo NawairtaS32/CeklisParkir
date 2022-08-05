@@ -45,7 +45,7 @@
         <!-- Modal cetak data-->
         <div class="modal fade" id="cetakuser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
+                <div class="modal-table modal-content">
                     <div class="modal-header">
                         <span class="modal-title" id="exampleModalLongTitle">Cetak Data user</span>
                     </div>
@@ -140,13 +140,14 @@
                 </tbody>
             </table>
         </dir>
-
+        <br><br>
         <div class="info">
             Jumlah Data: {{ $data_user->total() }}<br>
             Halaman : {{ $data_user->currentPage() }}<br>
             Data perhalaman: {{ $data_user->perPage() }}<br>
             <br>
             {{ $data_user->links() }}
+            <br><br>
         </div>
     </div>
 @else

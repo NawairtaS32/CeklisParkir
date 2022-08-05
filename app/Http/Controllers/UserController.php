@@ -27,7 +27,7 @@ class UserController extends Controller
     {
         $jumlah_user = User::count();
         $cari = $request->cari;
-        $data_user   = User::latest()->paginate(5);
+        $data_user   = User::orderBy('updated_at', 'desc')->paginate(20);
 
         if (request('cari')) {
             $data_user   = User::where('panggilan', 'like', "%".$request->cari."%")
